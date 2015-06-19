@@ -1,0 +1,42 @@
+<link rel="import" href="../polymer/polymer.html"/>
+<link rel="import" href="px-card.html"/>
+<link rel="import" href="../px-ts-chart/px-ts-chart.html"/>
+
+<dom-module id="time-series-card">
+    <template>
+        <px-card icon="fa-suitcase" header-text="Time Series Card">
+            <h4>Context Name: <span>{{context.name}}</span></h4>
+            <px-ts-chart id="tsChart" legend='{
+                    "enabled": true,
+                    "useHTML": false,
+                    "layout": "vertical",
+                    "verticalAlign": "top",
+                    "align": "left",
+                    "floating": false,
+                    "itemMarginTop": 5,
+                    "itemMarginBottom": 5,
+                    "itemStyle": { "color": "#333333", "cursor": "pointer", "fontSize": "12px", "fontWeight": "bold" }
+                }'>
+                <px-ts-chart-controls data-controls></px-ts-chart-controls>
+            </px-ts-chart>
+        </px-card>
+    </template>
+</dom-module>
+<script>
+
+    Polymer({
+        is: 'time-series-card',
+        init: function() {
+            var self = this;
+            // use the API getData method to fetch data, then pass that data into our time series widget
+            this.getData('http://localhost:3000/ts').then(function(data) {
+                var timeSeriesData = window.px.timeseries.adapter.kairosdb.transform(data);
+                timeSeriesData.forEach(function(series) {
+                    series.id = series.name;
+                    self.$.tsChart.addSeries(series);
+                });
+            });
+        },
+        behaviors: [px.card]
+    });
+</script>

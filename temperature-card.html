@@ -1,0 +1,62 @@
+<link rel="import" href="../polymer/polymer.html" />
+<link rel="import" href="px-card.html" />
+
+<dom-module id="temperature-card">
+  <style>
+    .temp--box{
+      border: 1px solid black;
+    }
+  </style>
+  <template>
+    <px-card header-text="Data Binding">
+      <p>
+        This Fahrenheit to Celsius converter shows how data can be linked between widgets within or between cards. This concept illustrates how, as with a time series component, making connections between multiple charts within a deck or individual cards may
+        be useful.
+      </p>
+
+      <div class="layout">
+        <div class="layout__item temp--box u-ml">
+          <label class="layout">{{fahrenheit}}
+            <span><sup>o</sup>F</span>
+          </label>
+          <div class="layout">
+            <input type="text" value="{{fahrenheit::input}}">
+            <button on-click="fahrenheitChanged">go</button>
+          </div>
+        </div>
+        <div class="layout__item temp--box">
+          <label class="layout">{{celsius}}
+            <span><sup>o</sup>C</span>
+          </label>
+          <div class="layout">
+            <input type="text" value="{{celsius::input}}">
+            <button on-click="celsiusChanged">go</button>
+          </div>
+        </div>
+      </div>
+    </px-card>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'temperature-card',
+    ready: function() {
+      this.fahrenheit = 50;
+      this.celsius = this.convertFtoC(this.fahrenheit);
+    },
+    convertCtoF: function(c) {
+      return (c * 1.8 + 32).toFixed(1);
+    },
+    convertFtoC: function(f) {
+      return ((f - 32) / 1.8).toFixed(1);
+    },
+    celsiusChanged: function(e) {
+      this.fahrenheit = this.convertCtoF(this.celsius);
+    },
+    fahrenheitChanged: function(e) {
+      this.celsius = this.convertFtoC(this.fahrenheit);
+    },
+    behaviors: [px.card]
+  });
+</script>

@@ -1,0 +1,81 @@
+<link rel="import" href="../polymer/polymer.html"/>
+<link rel="import" href="px-card.html"/>
+
+<!-- this is a tag list widget -->
+<dom-module id="px-tag-list">
+    <template>
+        <h4>Tags:</h4>
+        <ul>
+            <template is="dom-repeat" items="{{tags}}">
+                <li>{{item}}</li>
+            </template>
+        </ul>
+        <input value="{{text::input}}">
+        <button on-click="addTags">Add Tags</button>
+    </template>
+
+</dom-module>
+<script>
+    Polymer({
+        is: 'px-tag-list',
+        properties: {
+            tags: {
+                type: Object,
+                notify: true
+            }
+        },
+        addTags: function() {
+            if (this.text !== '') {
+                this.push('tags', this.text);
+            }
+            this.text = '';
+        },
+        ready: function() {
+            this.text = '';
+            this.tags = [];
+        }
+    });
+</script>
+
+<!-- this is a super simplified time series widget -->
+<dom-module id="px-fake-timeseries">
+    <template>
+        <h4>Fake timeseries</h4>
+        <h5>Series displayed:</h5>
+        <p>{{chartState.series}}</p>
+    </template>
+
+</dom-module>
+<script>
+    Polymer({
+        is: 'px-fake-timeseries',
+        properties: {
+            chartState: {
+                type: Object
+            }
+        }
+    });
+</script>
+
+<!-- this is the widget-to-widget-card -->
+<dom-module id="widget-to-widget-card">
+    <template>
+        <px-card icon="fa-suitcase" header-text="Widget to Widget Card">
+            <h4>Widget to Widget communication</h4>
+            <px-tag-list tags="{{tags}}" style="float: right; border:black 1px dashed"></px-tag-list>
+            <px-fake-timeseries chart-state="{{chartState}}"
+                                style="border:black 1px dashed; float: left"></px-fake-timeseries>
+            <div style="clear: both;"></div>
+        </px-card>
+    </template>
+</dom-module>
+<script>
+    Polymer({
+        is: 'widget-to-widget-card',
+        observers: ['tagsChanged(tags.*)'],
+        tagsChanged: function(newTags, oldTags) {
+            this.chartState = {series: newTags.base};
+        },
+        behaviors: [px.card]
+    });
+</script>
