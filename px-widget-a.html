@@ -1,0 +1,32 @@
+<link rel="import" href="../polymer/polymer.html"/>
+
+<dom-module id="px-widget-a">
+    <template>
+        <h3>Widget A</h3>
+        <input value="{{text::input}}">
+        <button on-click="addTags">Go</button>
+    </template>
+
+</dom-module>
+
+<script>
+    Polymer({
+        is: 'px-widget-a',
+        properties: {
+            tags: {
+                type: Object,
+                notify: true
+            }
+        },
+        addTags: function() {
+            if (this.text !== '') {
+                this.set('tags', this.text);
+            }
+            this.text = '';
+        },
+        ready: function() {
+            this.text = '';
+            this.tags = '';
+        }
+    });
+</script>
