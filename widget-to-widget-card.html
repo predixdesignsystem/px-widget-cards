@@ -5,10 +5,13 @@
 
 <!-- this is the widget-to-widget-card -->
 <dom-module id="widget-to-widget-card">
+    <link rel="import" type="css" href="css/px-sample-cards.css">
     <template>
         <px-card header-text="Interactions within a card">
-            <px-widget-a tags="{{tags}}"></px-widget-a>
-            <px-widget-b state="{{cardState}}"></px-widget-b>
+          <div class="flex">
+            <px-widget-a class="flex__item" tags="{{tags}}"></px-widget-a>
+            <px-widget-b class="flex__item" state="{{cardState}}"></px-widget-b>
+          </div>
         </px-card>
     </template>
 </dom-module>
