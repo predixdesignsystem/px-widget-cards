@@ -19,11 +19,32 @@ THIS FILE SHOULD CONTAIN ONLY ABSTRACT/'SKETCH' THEME RULES, NOT SPECIFIC TO PRE
 Predix branding rules go in px-sample-cards-predix.scss, not in this file.
 */
 
-$imported-once-files: ();
-
-
 
 /*
 See https://github.sw.ge.com/pxc/px-getting-started#a-note-about-relative-import-paths for an explanation of the `../`
 in import paths
 */
+
+// Settings
+@import "px-defaults-design/_settings.defaults.scss";
+@import "px-colors-design/_settings.colors.scss";
+
+// Generic
+@import "px-normalize-design/_generic.normalize.scss";
+@import "px-box-sizing-design/_generic.box-sizing.scss";
+@import "px-helpers-design/_generic.helpers.scss";
+
+// Base
+@import "px-flexbox-design/_base.flexbox.scss";
+@import "px-typography-design/_base.typography.scss";
+@import "px-iconography-design/_base.iconography.scss";
+
+$inuit-enable-input--regular            : true;
+
+
+@import "px-forms-design/_base.forms.scss";
+
+// Objects
+$inuit-enable-btn--bare                 : true;
+
+@import "px-buttons-design/_objects.buttons.scss";

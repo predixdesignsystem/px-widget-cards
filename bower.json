@@ -20,6 +20,9 @@
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#~v1.0.4",
-    "px-starter-kit-design": "git://github.sw.ge.com/PXd/px-starter-kit-design.git#~0.4.1"
+    "px-starter-kit-design": "git://github.sw.ge.com/PXd/px-starter-kit-design.git#~0.4.1",
+    "px-buttons-design": "git://github.sw.ge.com/PXd/px-buttons-design.git#~0.4.4",
+    "px-iconography-design": "https://github.build.ge.com/PXd/px-iconography-design.git#~0.2.4",
+    "px-forms-design": "https://github.build.ge.com/PXd/px-forms-design.git#~0.3.4"
   }
 }
