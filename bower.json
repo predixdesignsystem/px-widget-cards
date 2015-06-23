@@ -15,8 +15,8 @@
   ],
   "dependencies": {
     "polymer": "~v1.0.3",
-    "px-theme": "git://github.build.ge.com/PXc/px-theme.git#v0.2.1",
-    "px-card": "https://github.build.ge.com/Predix-Experience/px-card.git#~0.0.2"
+    "px-theme": "git://github.build.ge.com/PXc/px-theme.git#~v0.2.0",
+    "px-card": "https://github.build.ge.com/Predix-Experience/px-card.git#master"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#~v1.0.4",

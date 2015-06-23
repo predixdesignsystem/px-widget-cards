@@ -26,16 +26,94 @@
 
     Polymer({
         is: 'time-series-card',
-        init: function() {
+        init: function () {
             var self = this;
-            // use the API getData method to fetch data, then pass that data into our time series widget
-            this.getData('http://localhost:3000/ts').then(function(data) {
-                var timeSeriesData = window.px.timeseries.adapter.kairosdb.transform(data);
-                timeSeriesData.forEach(function(series) {
-                    series.id = series.name;
-                    self.$.tsChart.addSeries(series);
-                });
+            /**
+             * use the card's getData API method to fetch data, then pass that data into our time series widget
+             * e.g. this.getData('http://predix-time-series-service').then(function(predixTimeSeriesData) {
+             *
+             * sample time series data return from time series service
+             */
+            var predixTimeSeriesData = {queries: [
+                {
+                    'sample_size': 1071,
+                    'results': [
+                        {
+                            'name': 'Winter 1970-1971',
+                            'values': [
+                                [
+                                    25833600000,
+                                    0
+                                ],
+                                [
+                                    27043200000,
+                                    0.6
+                                ],
+                                [
+                                    27734400000,
+                                    0.7
+                                ],
+                                [
+                                    28944000000,
+                                    0.8
+                                ]
+                            ]
+                        },
+                        {
+                            'name': 'Winter 1971-1972',
+                            'values': [
+                                [
+                                    25833600000,
+                                    2
+                                ],
+                                [
+                                    27043200000,
+                                    3
+                                ],
+                                [
+                                    27734400000,
+                                    5
+                                ],
+                                [
+                                    28944000000,
+                                    2
+                                ]
+                            ]
+                        },
+                        {
+                            'name': 'Winter 1973-1974',
+                            'values': [
+                                [
+                                    25833600000,
+                                    5
+                                ],
+                                [
+                                    27043200000,
+                                    4
+                                ],
+                                [
+                                    27734400000,
+                                    2
+                                ],
+                                [
+                                    28944000000,
+                                    0
+                                ]
+                            ]
+                        }
+                    ]
+                }
+            ]};
+
+            //transform time series service data into time series widget format
+            var timeSeriesChartData = window.px.timeseries.adapter.kairosdb.transform(predixTimeSeriesData.queries);
+
+            timeSeriesChartData.forEach(function (series) {
+                series.id = series.name;
+                self.$.tsChart.addSeries(series);
             });
+
+            //});
         },
         behaviors: [px.card]
     });
