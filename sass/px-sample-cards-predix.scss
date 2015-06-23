@@ -20,16 +20,3 @@ common/abstract rules go in px-sample-cards-sketch.scss, not in this file.
 */
 
 @import 'px-sample-cards-sketch.scss';
-
-.circle {
-  border-style: none;
-  -webkit-box-shadow: 0.2rem 0.2rem 0.2rem 0 rgba(0,0,0,0.5);
-  -moz-box-shadow: 0.2rem 0.2rem 0.2rem 0 rgba(0,0,0,0.5);
-  box-shadow: 0.2rem 0.2rem 0.2rem 0 rgba(0,0,0,0.5);
-}
-
-.counter {
-  background-color: rgb(0,92,185);
-  color: white;
-  font-family: "GE Sans", sans-serif;
-}

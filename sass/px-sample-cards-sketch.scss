@@ -27,31 +27,3 @@ $imported-once-files: ();
 See https://github.sw.ge.com/pxc/px-getting-started#a-note-about-relative-import-paths for an explanation of the `../`
 in import paths
 */
-
-
-
-
-
-.circle {
-  cursor: pointer;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-  box-sizing: content-box; /* Even though we use shadow DOM in this component, Safari insists on bleeding styles through from outside, so reset the resetting of this */
-
-  border: 1px black dashed;
-  font-size: 2.0rem;
-  text-align: center;
-  padding: 1.25rem 0.4rem 0.4rem 0.4rem;
-  border-radius: 50%;
-}
-.counter {
-  display: inline-block;
-  background-color: #ececec;
-  min-width: 6.5rem;
-  height: 3rem;
-}
