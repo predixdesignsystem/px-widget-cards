@@ -28,12 +28,13 @@
         is: 'time-series-card',
         init: function () {
             var self = this;
-            // use the API getData method to fetch data, then pass that data into our time series widget
-            //this.getData('http://localhost:3000/ts').then(function(data) {
-            /*
-             data for time series widget
+            /**
+             * use the card's getData API method to fetch data, then pass that data into our time series widget
+             * e.g. this.getData('http://predix-time-series-service').then(function(predixTimeSeriesData) {
+             *
+             * sample time series data return from time series service
              */
-            var tsServiceData = [
+            var predixTimeSeriesData = {queries: [
                 {
                     'sample_size': 1071,
                     'results': [
@@ -102,15 +103,17 @@
                         }
                     ]
                 }
-            ];
+            ]};
 
+            //transform time series service data into time series widget format
+            var timeSeriesChartData = window.px.timeseries.adapter.kairosdb.transform(predixTimeSeriesData.queries);
 
-            var timeSeriesData = window.px.timeseries.adapter.kairosdb.transform(tsServiceData);
-
-            timeSeriesData.forEach(function (series) {
+            timeSeriesChartData.forEach(function (series) {
                 series.id = series.name;
                 self.$.tsChart.addSeries(series);
             });
+
+            //});
         },
         behaviors: [px.card]
     });
