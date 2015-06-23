@@ -13,17 +13,17 @@
 </dom-module>
 <script>
 
-    Polymer({
+        Polymer({
         is: 'fetch-data-card',
         init: function() {
-            this.getTemperature('http://localhost:3000/gauge');
+            this.getTemperature();
         },
-        getMoreTemperatureData: function() {
-            this.getTemperature('http://localhost:3000/bar');
-        },
-        getTemperature: function(url) {
+        getTemperature: function() {
             var self = this;
-            this.getData(url).then(function(data) {
+
+            /**
+             * use card's getData api to get the temperature data
+            this.getData(this.context.url).then(function(data) {
                 // on fulfillment
                 self.currentTemperature = data.value;
             }, function(reason) {
@@ -31,6 +31,9 @@
                 console.error('ERROR', reason);
                 self.currentTemperature = 'error';
             });
+            */
+            //for demo purpose generate random temperature data below
+            this.currentTemperature = Math.floor((Math.random() * 110) + 33);
         },
         behaviors: [px.card]
     });
