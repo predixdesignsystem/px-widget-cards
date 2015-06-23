@@ -2729,20 +2729,3 @@ textarea {
 */
 .btn + .btn {
   margin-left: 0.6666666667rem; }
-
-/**
-   * Buttons with no styles (good a11y practice to use <button> for actions rather than <a>).
-   */
-.btn--bare {
-  border: 0;
-  border-radius: 0;
-  padding: 0;
-  line-height: inherit; }
-  .btn--bare,
-  .btn--bare:visited,
-  .btn--bare:hover,
-  .btn--bare:active,
-  .btn--bare:focus {
-    box-shadow: none;
-    background: none;
-    color: inherit; }
