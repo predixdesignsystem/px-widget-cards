@@ -2730,6 +2730,23 @@ textarea {
 .btn + .btn {
   margin-left: 0.6666666667rem; }
 
+/**
+   * Call-to-action buttons.
+   */
+.btn--huge {
+  font-size: 2rem; }
+
+/**
+   * Round-ended buttons.
+   *
+   * 1. Overly-large value to ensure the radius rounds the whole end of the
+   *    button.
+   */
+.btn--icon {
+  width: 2em;
+  border-radius: 6.6666666667em;
+  padding: 1px 0 0 1px; }
+
 .toggle__input {
   position: absolute !important;
   overflow: hidden !important;
