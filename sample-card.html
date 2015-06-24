@@ -42,10 +42,8 @@
 <!-- this is a sample card which shows how to communicate with the outside world/other cards (through the deck) -->
 <dom-module id="sample-card">
   <template>
-    <px-card>
-      <h4>Context Name:
-        <span>{{context.name}}</span>
-      </h4>
+    <px-card header-text="Card to Card Interactions">
+      <content></content>
       <my-widget card-state="{{cardState}}"></my-widget>
     </px-card>
   </template>
