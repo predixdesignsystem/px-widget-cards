@@ -21,19 +21,16 @@
     },
     zoom: function() {
       this.cardState.min++;
-      this.cardState.max--;
 
       // tell the outside world that i've updated my state by using set (with notify: true above)
       this.set('cardState', {
         min: this.cardState.min,
-        max: this.cardState.max
       });
     },
     ready: function() {
       // initialize the chart state
       this.cardState = {
-        min: 0,
-        max: 100
+        min: 0
       }
     }
   });
@@ -57,8 +54,7 @@
       //   then we will handle it here - in this case, by passing that information into the widget
       if (newState.zoom) {
         this.cardState = {
-          min: newState.zoom.min,
-          max: newState.zoom.max
+          min: newState.zoom.min
         };
       }
     },
@@ -66,8 +62,7 @@
       // when the cardState property has changed, we'll update the deck state to broadcast it to other cards
       this.updateDeck({
         zoom: {
-          min: newChartState.base.min,
-          max: newChartState.base.max
+          min: newChartState.base.min
         }
       });
     },
