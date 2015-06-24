@@ -1,0 +1,29 @@
+<dom-module id="toggle-card">
+  <link rel="import" type="css" href="css/px-sample-cards.css">
+  <template>
+    <px-card header-text="Show and Hide Cards">
+      <input id="toggleCard" checked=true class="toggle__input" type="checkbox" on-click="toggleHideCard">
+      <label for="toggleCard" class="toggle__label"></label>
+    </px-card>
+  </template>
+</dom-module>
+<script>
+  Polymer({
+    is: 'toggle-card',
+    behaviors: [px.card],
+    toggleHideCard: function(evt){
+      if(evt.target.checked){
+        this._showCard();
+      }
+      else{
+        this._hideCard();
+      }
+    },
+    _showCard: function () {
+      document.querySelector('#hide-card').showCard();
+    },
+    _hideCard: function () {
+      document.querySelector('#hide-card').hideCard();
+    }
+  });
+</script>
