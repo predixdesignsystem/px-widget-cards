@@ -1,35 +1,35 @@
-<link href="../polymer/polymer.html" rel="import"/>
-<link href="../px-card/px-card.html" rel="import"/>
+<!-- <link href="../polymer/polymer.html" rel="import"/> -->
+<!-- <link href="../px-card/px-card.html" rel="import"/> -->
 
-  <dom-module id="my-demo-card">
-    <template>
-      <px-card header-text="Card A">
-        <p>
-          moo
-        </p>
-      </px-card>
-    </template>
-  </dom-module>
-  <script>
-    Polymer({
-      is: 'my-demo-card',
-      behaviors: [px.card]
-    });
-  </script>
+<dom-module id="hide-card">
+  <template>
+    <px-card header-text="Card A">
+      <p>
+        moo
+      </p>
+    </px-card>
+  </template>
+</dom-module>
+<script>
+  Polymer({
+    is: 'hide-card',
+    behaviors: [px.card]
+  });
+</script>
 
-  <px-card>
-    <h3>Show and Hide Card</h3>
-    <button onclick="showCard()">Show demo card</button>
-    <button onclick="hideCard()">Hide demo card</button>
-  </px-card>
+<px-card>
+  <h3>Show and Hide Card</h3>
+  <button onclick="showCard()">Show demo card</button>
+  <button onclick="hideCard()">Hide demo card</button>
+</px-card>
 
 
 <script>
   showCard = function () {
-    document.querySelector('#my-demo-card').showCard();
+    document.querySelector('#hide-card').showCard();
   };
 
   hideCard = function () {
-    document.querySelector('#my-demo-card').hideCard();
+    document.querySelector('#hide-card').hideCard();
   };
 </script>
