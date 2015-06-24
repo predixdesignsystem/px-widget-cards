@@ -1,12 +1,9 @@
-<!-- <link href="../polymer/polymer.html" rel="import"/> -->
-<!-- <link href="../px-card/px-card.html" rel="import"/> -->
+<link href="../polymer/polymer.html" rel="import"/>
+<link href="../px-card/px-card.html" rel="import"/>
 
 <dom-module id="hide-card">
   <template>
     <px-card header-text="Card A">
-      <p>
-        moo
-      </p>
     </px-card>
   </template>
 </dom-module>
@@ -17,19 +14,31 @@
   });
 </script>
 
-<px-card>
-  <h3>Show and Hide Card</h3>
-  <button onclick="showCard()">Show demo card</button>
-  <button onclick="hideCard()">Hide demo card</button>
-</px-card>
-
-
+<dom-module id="toggle-card">
+  <link rel="import" type="css" href="css/px-sample-cards.css">
+  <template>
+    <px-card header-text="Show and Hide Cards">
+      <input id="toggleCard" class="toggle__input" type="checkbox" on-click="toggleHideCard">
+      <label for="toggleCard" class="toggle__label"></label>
+      <!-- <button onclick="showCard()">Show demo card</button>
+      <button onclick="hideCard()">Hide demo card</button> -->
+    </px-card>
+  </template>
+</dom-module>
 <script>
-  showCard = function () {
-    document.querySelector('#hide-card').showCard();
-  };
-
-  hideCard = function () {
-    document.querySelector('#hide-card').hideCard();
-  };
+  Polymer({
+    is: 'toggle-card',
+    behaviors: [px.card],
+    toggleHideCard: function(a,b,c){
+      console.log(a);
+      console.log(b);
+      console.log(c);
+    },
+    _showCard: function () {
+      document.querySelector('#hide-card').showCard();
+    },
+    _hideCard: function () {
+      document.querySelector('#hide-card').hideCard();
+    }
+  });
 </script>
