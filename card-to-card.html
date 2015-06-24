@@ -1,43 +1,9 @@
 <link rel="import" href="../polymer/polymer.html" />
 <link rel="import" href="../px-card/px-card.html" />
-
-<!-- this is a sample widget, which just has a zoom button and displays two numbers -->
-<!--    it is used in the card below -->
-<dom-module id="my-widget">
-  <link rel="import" type="css" href="css/px-sample-cards.css">
-  <template>
-      <h3>{{cardState.min}}</h3>
-    <button class="btn" on-click="zoom">Zoom</button>
-  </template>
-</dom-module>
-<script>
-  Polymer({
-    is: 'my-widget',
-    properties: {
-      cardState: {
-        type: Object,
-        notify: true
-      }
-    },
-    zoom: function() {
-      this.cardState.min++;
-
-      // tell the outside world that i've updated my state by using set (with notify: true above)
-      this.set('cardState', {
-        min: this.cardState.min,
-      });
-    },
-    ready: function() {
-      // initialize the chart state
-      this.cardState = {
-        min: 0
-      }
-    }
-  });
-</script>
+<link rel="import" href="px-count-widget.html" />
 
 <!-- this is a sample card which shows how to communicate with the outside world/other cards (through the deck) -->
-<dom-module id="sample-card">
+<dom-module id="card-to-card">
   <template>
     <px-card header-text="Card to Card Interactions">
       <content></content>
@@ -47,14 +13,14 @@
 </dom-module>
 <script>
   Polymer({
-    is: 'sample-card',
+    is: 'card-to-card',
     observers: ['chartStateChanged(cardState.*)'],
     deckStateChanged: function(newState, oldState) {
       // when the deck state has changed (for example, when another card has changed that state),
       //   then we will handle it here - in this case, by passing that information into the widget
       if (newState.zoom) {
         this.cardState = {
-          min: newState.zoom.min
+          count: newState.zoom.count
         };
       }
     },
@@ -62,7 +28,7 @@
       // when the cardState property has changed, we'll update the deck state to broadcast it to other cards
       this.updateDeck({
         zoom: {
-          min: newChartState.base.min
+          count: newChartState.base.count
         }
       });
     },
