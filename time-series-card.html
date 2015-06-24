@@ -3,10 +3,9 @@
 <link rel="import" href="../px-ts-chart/px-ts-chart.html"/>
 
 <dom-module id="time-series-card">
-    <template>
-        <px-card icon="fa-suitcase" header-text="Time Series Card">
-            <h4>Context Name: <span>{{context.name}}</span></h4>
-            <px-ts-chart id="tsChart" legend='{
+  <template>
+    <px-card header-text="{{context.name}}">
+      <px-ts-chart id="tsChart" legend='{
                     "enabled": true,
                     "useHTML": false,
                     "layout": "vertical",
@@ -17,104 +16,104 @@
                     "itemMarginBottom": 5,
                     "itemStyle": { "color": "#333333", "cursor": "pointer", "fontSize": "12px", "fontWeight": "bold" }
                 }'>
-                <px-ts-chart-controls data-controls></px-ts-chart-controls>
-            </px-ts-chart>
-        </px-card>
-    </template>
+        <px-ts-chart-controls data-controls></px-ts-chart-controls>
+      </px-ts-chart>
+    </px-card>
+  </template>
 </dom-module>
 <script>
 
-    Polymer({
-        is: 'time-series-card',
-        init: function () {
-            var self = this;
-            /**
-             * use the card's getData API method to fetch data, then pass that data into our time series widget
-             * e.g. this.getData('http://predix-time-series-service').then(function(predixTimeSeriesData) {
+  Polymer({
+    is: 'time-series-card',
+    init: function () {
+      var self = this;
+      /**
+       * use the card's getData API method to fetch data, then pass that data into our time series widget
+       * e.g. this.getData('http://predix-time-series-service').then(function(predixTimeSeriesData) {
              *
              * sample time series data return from time series service
              */
-            var predixTimeSeriesData = {queries: [
-                {
-                    'sample_size': 1071,
-                    'results': [
-                        {
-                            'name': 'Winter 1970-1971',
-                            'values': [
-                                [
-                                    25833600000,
-                                    0
-                                ],
-                                [
-                                    27043200000,
-                                    0.6
-                                ],
-                                [
-                                    27734400000,
-                                    0.7
-                                ],
-                                [
-                                    28944000000,
-                                    0.8
-                                ]
-                            ]
-                        },
-                        {
-                            'name': 'Winter 1971-1972',
-                            'values': [
-                                [
-                                    25833600000,
-                                    2
-                                ],
-                                [
-                                    27043200000,
-                                    3
-                                ],
-                                [
-                                    27734400000,
-                                    5
-                                ],
-                                [
-                                    28944000000,
-                                    2
-                                ]
-                            ]
-                        },
-                        {
-                            'name': 'Winter 1973-1974',
-                            'values': [
-                                [
-                                    25833600000,
-                                    5
-                                ],
-                                [
-                                    27043200000,
-                                    4
-                                ],
-                                [
-                                    27734400000,
-                                    2
-                                ],
-                                [
-                                    28944000000,
-                                    0
-                                ]
-                            ]
-                        }
-                    ]
-                }
-            ]};
+      var predixTimeSeriesData = {queries: [
+        {
+          'sample_size': 1071,
+          'results': [
+            {
+              'name': 'Winter 1970-1971',
+              'values': [
+                [
+                  25833600000,
+                  0
+                ],
+                [
+                  27043200000,
+                  0.6
+                ],
+                [
+                  27734400000,
+                  0.7
+                ],
+                [
+                  28944000000,
+                  0.8
+                ]
+              ]
+            },
+            {
+              'name': 'Winter 1971-1972',
+              'values': [
+                [
+                  25833600000,
+                  2
+                ],
+                [
+                  27043200000,
+                  3
+                ],
+                [
+                  27734400000,
+                  5
+                ],
+                [
+                  28944000000,
+                  2
+                ]
+              ]
+            },
+            {
+              'name': 'Winter 1973-1974',
+              'values': [
+                [
+                  25833600000,
+                  5
+                ],
+                [
+                  27043200000,
+                  4
+                ],
+                [
+                  27734400000,
+                  2
+                ],
+                [
+                  28944000000,
+                  0
+                ]
+              ]
+            }
+          ]
+        }
+      ]};
 
-            //transform time series service data into time series widget format
-            var timeSeriesChartData = window.px.timeseries.adapter.kairosdb.transform(predixTimeSeriesData.queries);
+      //transform time series service data into time series widget format
+      var timeSeriesChartData = window.px.timeseries.adapter.kairosdb.transform(predixTimeSeriesData.queries);
 
-            timeSeriesChartData.forEach(function (series) {
-                series.id = series.name;
-                self.$.tsChart.addSeries(series);
-            });
+      timeSeriesChartData.forEach(function (series) {
+        series.id = series.name;
+        self.$.tsChart.addSeries(series);
+      });
 
-            //});
-        },
-        behaviors: [px.card]
-    });
+      //});
+    },
+    behaviors: [px.card]
+  });
 </script>

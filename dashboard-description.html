@@ -1,0 +1,17 @@
+<link rel="import" href="../polymer/polymer.html"/>
+<link rel="import" href="../px-card/px-card.html"/>
+
+<dom-module id="dashboard-description">
+    <template>
+        <px-card header-text="Description of Dashboard">
+          dashboard content
+        </px-card>
+    </template>
+</dom-module>
+<script>
+
+    Polymer({
+        is: 'dashboard-description',
+        behaviors: [px.card]
+    });
+</script>
