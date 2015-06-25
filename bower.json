@@ -17,7 +17,15 @@
     "polymer": "~v1.0.3",
     "px-theme": "git://github.build.ge.com/PXc/px-theme.git#~v0.2.0",
     "px-iconography-design": "https://github.build.ge.com/PXd/px-iconography-design.git#~0.2.4",
-    "px-card": "https://github.build.ge.com/Predix-Experience/px-card.git#master"
+    "px-card": "https://github.build.ge.com/Predix-Experience/px-card.git#master",
+    "px-buttons-design": "https://github.build.ge.com/PXd/px-buttons-design.git#~0.4.7",
+    "px-layout-design": "https://github.build.ge.com/PXd/px-layout-design.git#~0.3.4",
+    "px-spacing-design": "https://github.build.ge.com/PXd/px-spacing-design.git#~0.3.3",
+    "px-forms-design": "https://github.build.ge.com/PXd/px-forms-design.git#~0.3.4",
+    "px-flag-design": "https://github.build.ge.com/PXd/px-flag-design.git#~0.2.4",
+    "px-code-design": "https://github.build.ge.com/PXd/px-code-design.git#~0.2.4",
+    "px-input-group-design": "https://github.build.ge.com/PXd/px-input-group-design.git#~0.2.4",
+    "px-defaults-design": "https://github.build.ge.com/PXd/px-defaults-design.git#~0.2.4"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#~v1.0.4",

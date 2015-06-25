@@ -2,9 +2,23 @@
 <link rel="import" href="../px-card/px-card.html" />
 
 <dom-module id="temperature-card">
+  <link rel="import" type="css" href="css/px-sample-cards.css" />
   <style>
-    .temp--box{
-      border: 1px solid black;
+    .temp--box {
+      border: 1px solid #d1d0d8;
+      padding: 0 20px 20px 20px;
+      margin: 10px;
+    }
+    .more-info {
+      padding: 0 10px;
+    }
+    .more-info h2 a {
+      font-size: 14px;
+      margin-left: 10px;
+    }
+    .temp-box-container {
+      width: 80%;
+      margin: 0 auto;
     }
   </style>
   <template>
@@ -13,27 +27,33 @@
         This Fahrenheit to Celsius converter shows how data can be linked between widgets within or between cards. This concept illustrates how, as with a time series component, making connections between multiple charts within a deck or individual cards may
         be useful.
       </p>
-
-      <div class="layout">
-        <div class="layout__item temp--box u-ml">
-          <label class="layout">{{fahrenheit}}
-            <span><sup>o</sup>F</span>
-          </label>
-          <div class="layout">
-            <input type="text" value="{{fahrenheit::input}}">
-            <button on-click="fahrenheitChanged">go</button>
+      <div class="flex temp-box-container">
+        <div class="flex__item temp--box">
+          <h1>{{fahrenheit}}<span><sup>o</sup>F</span></h1>
+          <div class="input-group">
+            <input class="text-input" type="text" value="{{fahrenheit::input}}"></input>
+            <button class="btn input-group__addon" type="button" on-click="fahrenheitChanged">Go</button>
           </div>
         </div>
-        <div class="layout__item temp--box">
-          <label class="layout">{{celsius}}
-            <span><sup>o</sup>C</span>
-          </label>
-          <div class="layout">
-            <input type="text" value="{{celsius::input}}">
-            <button on-click="celsiusChanged">go</button>
+        <div class="flex__item temp--box">
+          <h1>{{celsius}}<span><sup>o</sup>F</span></h1>
+          <div class="input-group">
+            <input class="text-input" type="text" value="{{celsius::input}}"></input>
+            <button class="btn input-group__addon" type="button" on-click="celsiusChanged">Go</button>
           </div>
         </div>
       </div>
+      <div class="temp-box-container">
+        <div class="more-info">
+          <h2>
+            More on Data Binding
+            <a href="#">View APIs &amp; Documentation</a>
+          </h2>
+        </div>
+      </div>
+
+
+
     </px-card>
   </template>
 </dom-module>

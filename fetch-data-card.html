@@ -2,39 +2,79 @@
 <link rel="import" href="../px-card/px-card.html"/>
 
 <dom-module id="fetch-data-card">
-    <template>
-        <px-card icon="fa-suitcase" header-text="Fetch Data Card">
-            <h1>Fetch data</h1>
-            <p>Context Name: <span>{{context.name}}</span></p>
-            <button on-click="getTemperature">Get Different Data</button>
-            <p id="temp">Current Temperature:<span>{{currentTemperature}}</span>F</p>
-        </px-card>
-    </template>
+  <link rel="import" type="css" href="css/px-sample-cards.css" />
+  <style>
+    .temp--box{
+      border: 1px solid #d1d0d8;
+      padding: 0 20px 20px 20px;
+      margin: 10px;
+    }
+    .more-info {
+      padding: 0 10px;
+    }
+    .more-info h2 a {
+      font-size: 14px;
+      margin-left: 10px;
+    }
+    .temp-box-container {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .center {
+      text-align: center;
+    }
+    .temperature-box button {
+      margin-bottom: 25px;
+    }
+    .temperature-box h1 {
+      font-size: 32px;
+    }
+  </style>
+  <template>
+    <px-card icon="fa-suitcase" header-text="Fetch Data Card">
+      <h1>Fetching Data</h1>
+      <p>This temperature display control shows how your card can connect to an external data source. As in the case of time series data you will want to display data points that are stored outside of your web server within a separate database. This is critical to providing your application with real world value related to the health of your facility and assets. Please see comments within the code for data control instructions.</p>
+
+      <div class="layout center temperature-box">
+        <div class="layout__item">
+          <h1>Starting Temperature : <span>{{currentTemperature}}</span><sup>o</sup> F</h1>
+          <br />
+          <button class="btn btn--huge" on-click="getTemperature">Get New Data</button>
+        </div>
+      </div>
+
+      <div class="temp-box-container">
+        <div class="more-info">
+          <h2>More on Fetching Data <a href="#">View APIs &amp; Documentation</a></h2>
+        </div>
+      </div>
+
+    </px-card>
+  </template>
 </dom-module>
+
 <script>
-
-        Polymer({
-        is: 'fetch-data-card',
-        init: function() {
-            this.getTemperature();
-        },
-        getTemperature: function() {
-            var self = this;
-
-            /**
-             * use card's getData api to get the temperature data
-            this.getData(this.context.url).then(function(data) {
-                // on fulfillment
-                self.currentTemperature = data.value;
-            }, function(reason) {
-                // on rejection
-                console.error('ERROR', reason);
-                self.currentTemperature = 'error';
-            });
-            */
-            //for demo purpose generate random temperature data below
-            this.currentTemperature = Math.floor((Math.random() * 110) + 33);
-        },
-        behaviors: [px.card]
-    });
+  Polymer({
+    is: 'fetch-data-card',
+    init: function() {
+      this.getTemperature();
+    },
+    getTemperature: function() {
+      var self = this;
+      /**
+       * use card's getData api to get the temperature data
+      this.getData(this.context.url).then(function(data) {
+          // on fulfillment
+          self.currentTemperature = data.value;
+      }, function(reason) {
+          // on rejection
+          console.error('ERROR', reason);
+          self.currentTemperature = 'error';
+      });
+      */
+      //for demo purpose generate random temperature data below
+      this.currentTemperature = Math.floor((Math.random() * 110) + 33);
+    },
+    behaviors: [px.card]
+  });
 </script>

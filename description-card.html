@@ -1,0 +1,17 @@
+<link href="../polymer/polymer.html" rel="import"/>
+<link href="../px-card/px-card.html" rel="import"/>
+
+<dom-module id="description-card">
+  <link rel="import" type="css" href="css/px-sample-cards.css" />
+  <template>
+    <px-card>
+      <content></content>
+    </px-card>
+  </template>
+</dom-module>
+<script>
+  Polymer({
+    is: 'description-card',
+    behaviors: [px.card]
+  });
+</script>
