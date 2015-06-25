@@ -4,9 +4,14 @@
 <dom-module id="toggle-card">
   <link rel="import" type="css" href="css/px-sample-cards.css">
   <template>
-    <px-card header-text="Show and Hide Cards">
-      <input id="toggleCard" checked=true class="toggle__input" type="checkbox" on-click="toggleHideCard">
-      <label for="toggleCard" class="toggle__label"></label>
+    <px-card>
+      <div class="flex flex--justify flex--middle u-pt+">
+        <h3 class=u-m0>Show and Hide Cards</h3>
+        <div>
+          <input id="toggleCard" checked=true class="toggle__input toggle__input--large" type="checkbox" on-click="toggleHideCard">
+          <label for="toggleCard" class="toggle__label toggle__label--large"></label>
+        </div>
+      </div>
     </px-card>
   </template>
 </dom-module>

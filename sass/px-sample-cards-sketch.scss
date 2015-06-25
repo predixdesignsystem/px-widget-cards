@@ -49,6 +49,9 @@ $inuit-enable-input--regular            : true;
 
 // Objects
 @import "px-buttons-design/_objects.buttons.scss";
+
+$inuit-enable-toggle--large             : true;
+
 @import "px-toggle-design/_objects.toggle.scss";
 @import "px-flag-design/_objects.flag.scss";
 @import "px-input-group-design/_objects.input-group.scss";
