@@ -45,8 +45,19 @@ $inuit-enable-input--regular            : true;
 
 // Objects
 
-$inuit-enable-btn--huge                : true;
-$inuit-enable-btn--icon                : true;
+$inuit-enable-btn--huge                 : true;
+$inuit-enable-btn--icon                 : true;
 
 @import "px-buttons-design/_objects.buttons.scss";
+
+$inuit-enable-toggle--large             : true;
+
 @import "px-toggle-design/_objects.toggle.scss";
+@import "px-input-group-design/_objects.input-group.scss";
+
+// Spacing
+$inuit-enable-margins--none             : true;
+$inuit-enable-margins--huge             : true;
+$inuit-enable-paddings--large           : true;
+
+@import "px-spacing-design/_trumps.spacing.scss"

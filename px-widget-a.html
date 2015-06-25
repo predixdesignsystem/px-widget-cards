@@ -4,8 +4,10 @@
   <link rel="import" type="css" href="css/px-sample-cards.css" />
   <template>
     <h3>Widget A</h3>
-    <input class="text-input input--regular" type="text" placeholder="…" value="{{text::input}}">
-    <button class="btn" on-click="addTags">Go</button>
+    <div class="input-group">
+      <input class="text-input input--regular" type="text" value="{{text::input}}">
+      <button class="btn input-group__addon" on-click="addTags">Go</button>
+    </div>
   </template>
 
 </dom-module>

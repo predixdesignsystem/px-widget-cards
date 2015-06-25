@@ -5,10 +5,10 @@
 <dom-module id="my-widget">
   <link rel="import" type="css" href="css/px-sample-cards.css">
   <template>
-    <div class="flex">
-      <h3 class="flex__item">{{cardState.count}}</h3>
-      <div class="flex__item">
-        <button class=" btn btn--primary btn--icon btn--huge" on-click="zoom">
+    <div class="flex flex--center">
+      <h1 class=u-mr++>{{cardState.count}}</h1>
+      <div class=u-ml++>
+        <button class="btn btn--primary btn--icon btn--huge" on-click="zoom">
           <b>+</b>
         </button>
       </div>

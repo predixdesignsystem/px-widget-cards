@@ -2706,9 +2706,10 @@ textarea {
   text-align: center;
   text-decoration: none;
   text-transform: none;
-  background-color: #e4e4ea;
-  -webkit-appearance: button; }
+  white-space: nowrap;
+  background-color: #e4e4ea; }
   .btn,
+  .btn:link,
   .btn:visited,
   .btn:hover,
   .btn:focus,
@@ -2723,6 +2724,9 @@ textarea {
     border-color: #7c7c84;
     box-shadow: none;
     background-color: #9999a3; }
+
+button.btn {
+  -webkit-appearance: button; }
 
 /**
 * Establish default space between adjacent buttons
@@ -2802,3 +2806,148 @@ textarea {
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
     background-color: white;
     transition: margin 0.4s, background 0.4s; }
+
+/**
+   * Small buttons.
+   */
+.toggle__input--large:checked + .toggle__label--large:after {
+  margin-left: 2.6666666667rem; }
+
+.toggle__label--large {
+  width: 5.3333333333rem;
+  height: 2.6666666667rem;
+  border-radius: 2.6666666667rem; }
+  .toggle__label--large:before {
+    border-radius: 2.6666666667rem; }
+  .toggle__label--large:after {
+    top: 0.2666666667rem;
+    bottom: 0.2666666667rem;
+    left: 0.2666666667rem;
+    width: calc(2.6666666667rem - 0.5333333333rem);
+    border-radius: calc(2.6666666667rem - 0.5333333333rem); }
+
+.input-group {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .input-group .text-input {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    z-index: 2; }
+    .input-group .text-input:first-child {
+      margin-right: -1px; }
+    .input-group .text-input:last-child {
+      margin-left: -1px; }
+  .input-group .btn + .btn {
+    margin-left: -1px; }
+
+.input-group__addon {
+  padding-right: 0.6666666667rem;
+  padding-left: 0.6666666667rem; }
+  .input-group__addon.btn {
+    border-radius: 0;
+    box-shadow: none; }
+  .input-group__addon:not(.btn) {
+    height: 2em;
+    border: 1px solid #b1b1bc;
+    box-shadow: inset 0 0 0 1px #e4e4ea;
+    line-height: 2;
+    background-color: #efeff4;
+    color: #b1b1bc; }
+  .input-group__addon:first-child {
+    border-right-width: 0; }
+    .input-group__addon:first-child.btn {
+      border-width: 1px;
+      border-radius: 3px 0 0 3px; }
+  .input-group__addon:last-child {
+    border-left-width: 0; }
+    .input-group__addon:last-child.btn {
+      border-width: 1px;
+      border-radius: 0 3px 3px 0; }
+  .input-group__addon .fa {
+    color: #7c7c84; }
+
+/**
+ * Margin and padding helper classes. Use these to tweak layout on a micro
+ * level.
+ *
+ * `.u-(m|p)(t|r|b|l|h|v)(-|+|0) {}` = utility - margin/padding top/right/bottom/left/horizontal/vertical less/more/none
+ */
+/**
+     * Add huge margins.
+     */
+.u-m\00002b\00002b {
+  margin: 2rem !important; }
+
+.u-mt\00002b\00002b {
+  margin-top: 2rem !important; }
+
+.u-mr\00002b\00002b {
+  margin-right: 2rem !important; }
+
+.u-mb\00002b\00002b {
+  margin-bottom: 2rem !important; }
+
+.u-ml\00002b\00002b {
+  margin-left: 2rem !important; }
+
+.u-mh\00002b\00002b {
+  margin-right: 2rem !important;
+  margin-left: 2rem !important; }
+
+.u-mv\00002b\00002b {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important; }
+
+/**
+     * Remove margins.
+     */
+.u-m0 {
+  margin: 0 !important; }
+
+.u-mt0 {
+  margin-top: 0 !important; }
+
+.u-mr0 {
+  margin-right: 0 !important; }
+
+.u-mb0 {
+  margin-bottom: 0 !important; }
+
+.u-ml0 {
+  margin-left: 0 !important; }
+
+.u-mh0 {
+  margin-right: 0 !important;
+  margin-left: 0 !important; }
+
+.u-mv0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
+/**
+     * Add large paddings.
+     */
+.u-p\00002b {
+  padding: 1.3333333333rem !important; }
+
+.u-pt\00002b {
+  padding-top: 1.3333333333rem !important; }
+
+.u-pr\00002b {
+  padding-right: 1.3333333333rem !important; }
+
+.u-pb\00002b {
+  padding-bottom: 1.3333333333rem !important; }
+
+.u-pl\00002b {
+  padding-left: 1.3333333333rem !important; }
+
+.u-ph\00002b {
+  padding-right: 1.3333333333rem !important;
+  padding-left: 1.3333333333rem !important; }
+
+.u-pv\00002b {
+  padding-top: 1.3333333333rem !important;
+  padding-bottom: 1.3333333333rem !important; }
