@@ -5,19 +5,13 @@
 <dom-module id="time-series-card">
   <template>
     <px-card header-text="{{context.name}}">
-      <px-ts-chart id="tsChart" legend='{
-                    "enabled": true,
-                    "useHTML": false,
-                    "layout": "vertical",
-                    "verticalAlign": "top",
-                    "align": "left",
-                    "floating": false,
-                    "itemMarginTop": 5,
-                    "itemMarginBottom": 5,
-                    "itemStyle": { "color": "#333333", "cursor": "pointer", "fontSize": "12px", "fontWeight": "bold" }
-                }'>
-        <px-ts-chart-controls data-controls></px-ts-chart-controls>
+
+      <px-ts-chart id="tsChart">
+        <px-ts-chart-controls data-controls show-refresh="true" show-date-range="true"></px-ts-chart-controls>
+        <px-chart-yaxis id="firstAxis" offset="0"></px-chart-yaxis>
+        <px-chart-yaxis id="anotherAxis" opposite="true" offset="-2.5"></px-chart-yaxis>
       </px-ts-chart>
+
     </px-card>
   </template>
 </dom-module>
@@ -25,94 +19,31 @@
 
   Polymer({
     is: 'time-series-card',
-    init: function () {
+    init: function() {
       var self = this;
       /**
        * use the card's getData API method to fetch data, then pass that data into our time series widget
        * e.g. this.getData('http://predix-time-series-service').then(function(predixTimeSeriesData) {
-             *
-             * sample time series data return from time series service
-             */
-      var predixTimeSeriesData = {queries: [
-        {
-          'sample_size': 1071,
-          'results': [
-            {
-              'name': 'Winter 1970-1971',
-              'values': [
-                [
-                  25833600000,
-                  0
-                ],
-                [
-                  27043200000,
-                  0.6
-                ],
-                [
-                  27734400000,
-                  0.7
-                ],
-                [
-                  28944000000,
-                  0.8
-                ]
-              ]
-            },
-            {
-              'name': 'Winter 1971-1972',
-              'values': [
-                [
-                  25833600000,
-                  2
-                ],
-                [
-                  27043200000,
-                  3
-                ],
-                [
-                  27734400000,
-                  5
-                ],
-                [
-                  28944000000,
-                  2
-                ]
-              ]
-            },
-            {
-              'name': 'Winter 1973-1974',
-              'values': [
-                [
-                  25833600000,
-                  5
-                ],
-                [
-                  27043200000,
-                  4
-                ],
-                [
-                  27734400000,
-                  2
-                ],
-                [
-                  28944000000,
-                  0
-                ]
-              ]
-            }
-          ]
-        }
-      ]};
+       *
+       * you can also use the px data transformer to convert from KairosDB format to the expected timeseries data format
+       * e.g. var timeSeriesChartData = window.px.timeseries.adapter.kairosdb.transform(predixTimeSeriesData.queries);
+       *
+       * sample time series data return from time series service
+       */
 
-      //transform time series service data into time series widget format
-      var timeSeriesChartData = window.px.timeseries.adapter.kairosdb.transform(predixTimeSeriesData.queries);
-
-      timeSeriesChartData.forEach(function (series) {
-        series.id = series.name;
-        self.$.tsChart.addSeries(series);
+      this.getData('/sample-data/delta-egt-cruise.json').then(function(firstSeries) {
+        firstSeries.id = 'delta-egt-cruise';
+        firstSeries.axisId = "firstAxis";
+        firstSeries.upperThreshold = "30.5";
+        firstSeries.lowerThreshold = "6.25";
+        self.$.tsChart.addSeries(firstSeries);
       });
 
-      //});
+      this.getData('/sample-data/fan-vibration-cruise.json').then(function(secondSeries) {
+        secondSeries.id = 'fan-vibration-cruise';
+        secondSeries.axisId = "anotherAxis";
+        self.$.tsChart.addSeries(secondSeries);
+      });
     },
     behaviors: [px.card]
   });
