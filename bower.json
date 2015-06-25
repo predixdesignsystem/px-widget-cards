@@ -1,6 +1,6 @@
 {
   "name": "px-sample-cards",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": [
     "px-sample-cards.html"
   ],
@@ -21,8 +21,9 @@
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#~v1.0.4",
-    "px-starter-kit-design": "git://github.sw.ge.com/PXd/px-starter-kit-design.git#~0.4.1",
-    "px-buttons-design": "git://github.sw.ge.com/PXd/px-buttons-design.git#~0.4.4",
+    "px-starter-kit-design": "git://github.build.ge.com/PXd/px-starter-kit-design.git#~0.4.1",
+    "px-buttons-design": "git://github.build.ge.com/PXd/px-buttons-design.git#~0.4.4",
+    "px-input-group-design": "git://github.build.ge.com/PXd/px-input-group-design.git#~0.2.0",
     "px-forms-design": "https://github.build.ge.com/PXd/px-forms-design.git#~0.3.4",
     "px-layout-design": "https://github.build.ge.com/PXd/px-layout-design.git#~0.3.4",
     "px-toggle-design": "https://github.build.ge.com/PXd/px-toggle-design.git#~0.2.4"
