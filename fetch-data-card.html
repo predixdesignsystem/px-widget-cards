@@ -40,13 +40,11 @@
           <button class="btn btn--huge" on-click="getTemperature">Get New Data</button>
         </div>
       </div>
-
       <div class="temp-box-container">
         <div class="more-info">
-          <h2>More on Fetching Data <a href="#">View APIs &amp; Documentation</a></h2>
+          <h2>More on Fetching Data <a href="https://github.build.ge.com/pages/PXc/pxc-demos/bower_components/px-card/index.html">View APIs &amp; Documentation</a></h2>
         </div>
       </div>
-
     </px-card>
   </template>
 </dom-module>
@@ -59,6 +57,11 @@
     },
     getTemperature: function() {
       var self = this;
+      console.log('context: ', this.context);
+      this.getData(this.context.url).then(function(data) {
+        console.log(data);
+        self.currentTemperature = data['current_observation']['temp_f'];
+      });
       /**
        * use card's getData api to get the temperature data
       this.getData(this.context.url).then(function(data) {
@@ -71,7 +74,7 @@
       });
       */
       //for demo purpose generate random temperature data below
-      this.currentTemperature = Math.floor((Math.random() * 110) + 33);
+      //this.currentTemperature = Math.floor((Math.random() * 110) + 33);
     },
     behaviors: [px.card]
   });
