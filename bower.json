@@ -24,7 +24,7 @@
     "px-forms-design": "https://github.build.ge.com/PXd/px-forms-design.git#~0.3.4",
     "px-flag-design": "https://github.build.ge.com/PXd/px-flag-design.git#~0.2.4",
     "px-code-design": "https://github.build.ge.com/PXd/px-code-design.git#~0.2.4",
-    "px-input-group-design": "https://github.build.ge.com/PXd/px-input-group-design.git#~0.2.4",
+    "px-input-group-design": "https://github.build.ge.com/PXd/px-input-group-design.git#~0.2.5",
     "px-defaults-design": "https://github.build.ge.com/PXd/px-defaults-design.git#~0.2.4"
   },
   "devDependencies": {
