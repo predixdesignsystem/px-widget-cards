@@ -6,7 +6,9 @@
   <template>
     <px-card header-text="{{head}}">
       <div class="layout">
-        <p class="layout__item u-2/3">{{body}}</p>
+        <p class="layout__item u-2/3">
+          <content></content>
+        </p>
         <p class="u-1/3 u-m++">
           <a target="_blank" href="{{repo-url}}" class="btn btn--large">
             <i class="fa fa-github"></i>
@@ -25,6 +27,7 @@
 <script>
   Polymer({
     is: 'description-card',
-    behaviors: [px.card]
+    behaviors: [px.card],
+    bodyChanged: function(body) { this.$.bodyContent.innerHTML = body; }
   });
 </script>
