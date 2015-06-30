@@ -4,8 +4,16 @@
 <dom-module id="description-card">
   <link rel="import" type="css" href="css/px-sample-cards.css" />
   <template>
-    <px-card>
-      <content></content>
+    <px-card header-text="{{head}}">
+      <div class="flex">
+        <p class="u-mr+" style="margin-right: 10px;">{{body}}</p>
+        <p class="u-1/6">
+          <a target="_blank" href="{{repo-url}}" class=btn>
+            <i class="fa fa-github u-mr--"></i>
+            Github Repo
+          </a>
+        </p>
+      </div>
     </px-card>
   </template>
 </dom-module>
