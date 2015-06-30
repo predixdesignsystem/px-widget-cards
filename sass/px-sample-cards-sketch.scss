@@ -52,6 +52,22 @@ $inuit-enable-input--regular            : true;
 
 $inuit-enable-toggle--large             : true;
 
+// Layout
+$inuit-enable-layout--tiny: true;
+$inuit-enable-layout--small: true;
+$inuit-enable-layout--large: true;
+$inuit-enable-layout--huge: true;
+$inuit-enable-layout--flush: true;
+$inuit-enable-layout--rev: true;
+$inuit-enable-layout--middle: true;
+$inuit-enable-layout--bottom: true;
+$inuit-enable-layout--full: true;
+$inuit-enable-layout--right: true;
+$inuit-enable-layout--center: true;
+$inuit-enable-layout__item--full: true;
+$inuit-enable-layout__item--center: true;
+$inuit-enable-layout__item--bottom: true;
+
 @import "px-toggle-design/_objects.toggle.scss";
 @import "px-flag-design/_objects.flag.scss";
 @import "px-input-group-design/_objects.input-group.scss";
@@ -85,20 +101,5 @@ $inuit-input-group-color--icon: true;
 // Base Code Design
 $inuit-enable-code--inline: true;
 
-// Layout
-$inuit-enable-layout--tiny: true;
-$inuit-enable-layout--small: true;
-$inuit-enable-layout--large: true;
-$inuit-enable-layout--huge: true;
-$inuit-enable-layout--flush: true;
-$inuit-enable-layout--rev: true;
-$inuit-enable-layout--middle: true;
-$inuit-enable-layout--bottom: true;
-$inuit-enable-layout--full: true;
-$inuit-enable-layout--right: true;
-$inuit-enable-layout--center: true;
-$inuit-enable-layout__item--full: true;
-$inuit-enable-layout__item--center: true;
-$inuit-enable-layout__item--bottom: true;
 
 @import "px-spacing-design/_trumps.spacing.scss";
