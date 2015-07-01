@@ -179,9 +179,10 @@ ul, ol, dd {
 /* Embedded content
    ========================================================================== */
 /**
- * Remove border when inside `a` element in IE 8/9/10.
+ * Remove border when inside `a` element in IE 8/9/10. Make images shrink from their largest size.
  */
 img {
+  max-width: 100%;
   border: 0; }
 
 /**
@@ -2957,117 +2958,79 @@ button.btn {
             flex-basis: 40rem; }
 
 /**
-     * Layouts with tiny gutters.
-     */
-.layout--tiny {
-  margin-left: -0.3333333333rem; }
-  .layout--tiny > .layout__item {
-    padding-left: 0.3333333333rem; }
+ * A series of width helper classes that you can use to size things like grid
+ * systems. Classes can take a fraction-like format (e.g. `.u-2/3`) or a spoken-
+ * word format (e.g. `.u-2-of-3`).
+ *
+ */
+.u-1\/1 {
+  width: 100% !important; }
 
-/**
-     * Layouts with small gutters.
-     */
-.layout--small {
-  margin-left: -0.6666666667rem; }
-  .layout--small > .layout__item {
-    padding-left: 0.6666666667rem; }
+.u-1\/2 {
+  width: 50% !important;
+  -webkit-flex: none !important;
+      -ms-flex: none !important;
+          flex: none !important; }
 
-/**
-     * Layouts with large gutters.
-     */
-.layout--large {
-  margin-left: -1.3333333333rem; }
-  .layout--large > .layout__item {
-    padding-left: 1.3333333333rem; }
+.u-1\/3 {
+  width: 33.3333333333% !important;
+  -webkit-flex: none !important;
+      -ms-flex: none !important;
+          flex: none !important; }
 
-/**
-     * Layouts with huge gutters.
-     */
-.layout--huge {
-  margin-left: -2rem; }
-  .layout--huge > .layout__item {
-    padding-left: 2rem; }
+.u-2\/3 {
+  width: 66.6666666667% !important;
+  -webkit-flex: none !important;
+      -ms-flex: none !important;
+          flex: none !important; }
 
-/**
-     * Layouts with no gutters.
-     */
-.layout--flush {
-  margin-left: 0; }
-  .layout--flush > .layout__item {
-    padding-left: 0; }
+.u-1\/4 {
+  width: 25% !important;
+  -webkit-flex: none !important;
+      -ms-flex: none !important;
+          flex: none !important; }
 
-/**
-     * Reversed rendered order of layout items, e.g. items 1, 2, 3, 4 in your
-     * markup will display in order 4, 3, 2, 1 on your page.
-     */
-.layout--rev {
-  -webkit-flex-direction: row-reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse; }
+.u-2\/4 {
+  width: 50% !important;
+  -webkit-flex: none !important;
+      -ms-flex: none !important;
+          flex: none !important; }
 
-/**
-     * Align layout items to the vertical centers of each other.
-     */
-.layout--middle {
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
+.u-3\/4 {
+  width: 75% !important;
+  -webkit-flex: none !important;
+      -ms-flex: none !important;
+          flex: none !important; }
 
-/**
-     * Align layout items to the vertical bottoms of each other.
-     */
-.layout--bottom {
-  -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-          align-items: flex-end; }
+.u-1\/6 {
+  width: 16.6666666667% !important;
+  -webkit-flex: none !important;
+      -ms-flex: none !important;
+          flex: none !important; }
 
-/**
-     * Align layout items to all be the same height.
-     */
-.layout--full > .layout__item {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
+.u-2\/6 {
+  width: 33.3333333333% !important;
+  -webkit-flex: none !important;
+      -ms-flex: none !important;
+          flex: none !important; }
 
-/**
-     * Make the layout items fill up from the right hand side.
-     */
-.layout--right {
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
+.u-3\/6 {
+  width: 50% !important;
+  -webkit-flex: none !important;
+      -ms-flex: none !important;
+          flex: none !important; }
 
-/**
-     * Make the layout items fill up from the center outward.
-     */
-.layout--center {
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+.u-4\/6 {
+  width: 66.6666666667% !important;
+  -webkit-flex: none !important;
+      -ms-flex: none !important;
+          flex: none !important; }
 
-/**
-   * Make an individual layout item fill up the height of its layout.
-   */
-.layout__item--full {
-  -webkit-align-self: stretch;
-      -ms-flex-item-align: stretch;
-          align-self: stretch; }
-
-/**
-     * Make an individual layout item fill up from the center vertically.
-     */
-.layout__item--center {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center; }
-
-/**
-     * Make an individual layout item fill up from the bottom up.
-     */
-.layout__item--bottom {
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end; }
+.u-5\/6 {
+  width: 83.3333333333% !important;
+  -webkit-flex: none !important;
+      -ms-flex: none !important;
+          flex: none !important; }
 
 /**
  * Margin and padding helper classes. Use these to tweak layout on a micro
