@@ -36,12 +36,12 @@
 source. For example, with time series data, you can display data points from wherever your data is stored, which provides your application with real world value. See the instructions in the code comments for fetching data.</p>
       <div class="layout center temperature-box">
         <div class="layout__item">
-          <h1>Starting Temperature : <span>{{currentTemperature}}</span><sup>o</sup> F</h1>
+          <h1>Temperature : <span>{{currentTemperature}}</span><sup>o</sup> F</h1>
         </div>
       </div>
       <div class="layout center">
         <p class="layout__item">
-          Choose a city: 
+          Choose a city:
           <select value="{{context.url::change}}">
             <template is="dom-repeat" items="{{context.urls}}">
               <option value="{{item.url}}">{{item.name}}</option>
