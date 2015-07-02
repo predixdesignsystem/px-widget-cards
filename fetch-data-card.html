@@ -4,7 +4,7 @@
 <dom-module id="fetch-data-card">
   <link rel="import" type="css" href="css/px-sample-cards.css" />
   <style>
-    .temp--box{
+    .temp--box {
       border: 1px solid #d1d0d8;
       padding: 0 20px 20px 20px;
       margin: 10px;
@@ -37,9 +37,18 @@ source. For example, with time series data, you can display data points from whe
       <div class="layout center temperature-box">
         <div class="layout__item">
           <h1>Starting Temperature : <span>{{currentTemperature}}</span><sup>o</sup> F</h1>
-          <br />
-          <button class="btn btn--huge" on-click="getTemperature">Get New Data</button>
         </div>
+      </div>
+      <div class="layout center">
+        <p class="layout__item">
+          Choose a city: 
+          <select value="{{context.url::change}}">
+            <template is="dom-repeat" items="{{context.urls}}">
+              <option value="{{item.url}}">{{item.name}}</option>
+            </template>
+          </select>
+          <button class="btn btn--large btn--primary" on-click="getTemperature">Get New Data</button>
+        </p>
       </div>
       <div class="temp-box-container">
         <div class="more-info">
