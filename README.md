@@ -1,9 +1,9 @@
-Px-Sample-Cards
+px-widget-cards
 -----------------------------------------------
 
 ## Overview
 
-Px-Sample-Cards is a Predix Experience ('Px') component
+px-widget-cards is a Predix Experience ('Px') component
 
 ## Getting Started
 

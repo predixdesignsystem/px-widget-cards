@@ -43,12 +43,12 @@ describe('Instancing component from provided DOM data attribute', function () {
 
     before(function() {
         driver.get('fixture.html?dom=shady');
-        return driver.wait(webdriver.until.elementLocated(webdriver.By.css("px-sample-cards .circle")), 3000);
+        return driver.wait(webdriver.until.elementLocated(webdriver.By.css("px-widget-cards .circle")), 3000);
     });
 
     it('should instance a px-app-nav from the expected DOM', function () {
         return chai.expect(
-            driver.findElement(webdriver.By.css("px-sample-cards"))
+            driver.findElement(webdriver.By.css("px-widget-cards"))
         ).to.eventually.exist;
     });
 });
