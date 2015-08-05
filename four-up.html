@@ -29,6 +29,10 @@
 <script>
   Polymer({
     is: 'four-up',
-    behaviors: [px.card]
+    behaviors: [px.card],
+    ready: function() {
+      eqjs.refreshNodes();
+      eqjs.query(undefined, true);
+    }
   });
 </script>
