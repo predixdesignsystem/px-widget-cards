@@ -8,29 +8,23 @@ module.exports = function (grunt) {
     grunt.initConfig({
 
         clean: {
-            css: ['css'],
+            css: ['css/noprefix'],
             bower: ['bower_components'],
             reports: ['reports']
         },
 
         sass: {
             options: {
-                sourceMap: false, //no source maps b/c web-components inline css anyway...
                 importer: importOnce,
                 importOnce: {
                   index: true,
                   bower: true
-                },
-                 /*
-                  See https://github.sw.ge.com/pxc/px-getting-started#a-note-about-relative-import-paths for an explanation
-                  of the contents of the includePaths option for Sass
-                 */
-                includePaths: ['bower_components/*']
+                }
             },
             dist: {
                 files: {
-                    'css/noprefix/px-sample-cards-sketch.css': 'sass/px-sample-cards-sketch.scss',
-                    'css/noprefix/px-sample-cards.css': 'sass/px-sample-cards-predix.scss'
+                    'css/noprefix/px-widget-cards-sketch.css': 'sass/px-widget-cards-sketch.scss',
+                    'css/noprefix/px-widget-cards.css': 'sass/px-widget-cards-predix.scss'
                 }
             }
         },
