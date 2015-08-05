@@ -1,8 +1,8 @@
 {
-  "name": "px-sample-cards",
-  "version": "0.0.10",
+  "name": "px-widget-cards",
+  "version": "0.0.1",
   "main": [
-    "px-sample-cards.html"
+    "px-widget-cards.html"
   ],
   "ignore": [
     ".*",
@@ -18,33 +18,11 @@
     "px-iconography-design": "https://github.build.ge.com/PXd/px-iconography-design.git#~0.2.4"
   },
   "devDependencies": {
-    "px-theme": "https://github.build.ge.com/PXc/px-theme.git#~v0.2.0",
-    "px-card": "https://github.build.ge.com/Predix-Experience/px-card.git#~0.0.3",
-    "px-buttons-design": "https://github.build.ge.com/PXd/px-buttons-design.git#~0.4.7",
-    "px-layout-design": "https://github.build.ge.com/PXd/px-layout-design.git#~0.3.4",
-    "px-spacing-design": "https://github.build.ge.com/PXd/px-spacing-design.git#~0.3.3",
-    "px-forms-design": "https://github.build.ge.com/PXd/px-forms-design.git#~0.3.4",
-    "px-flag-design": "https://github.build.ge.com/PXd/px-flag-design.git#~0.2.4",
-    "px-code-design": "https://github.build.ge.com/PXd/px-code-design.git#~0.2.4",
-    "px-input-group-design": "https://github.build.ge.com/PXd/px-input-group-design.git#~0.2.5",
-    "px-defaults-design": "https://github.build.ge.com/PXd/px-defaults-design.git#~0.2.4",
-    "px-widths-design": "https://github.build.ge.com/PXd/px-widths-design.git#~0.3.4",
-    "px-meta-lists-design": "https://github.build.ge.com/PXd/px-meta-lists-design.git#~0.2.3",
-    "px-list-bare-design": "https://github.build.ge.com/PXd/px-list-bare-design.git#~0.2.5",
-    "px-list-inline-design": "https://github.build.ge.com/PXd/px-list-inline-design.git#~0.2.4",
-    "px-list-ui-design": "https://github.build.ge.com/PXd/px-list-ui-design.git#~0.3.4",
-    "px-meta-buttons-design": "https://github.build.ge.com/PXd/px-meta-buttons-design.git#~0.4.3",
-    "px-box-design": "https://github.build.ge.com/PXd/px-box-design.git#~0.3.7",
-    "pdx-navbar": "https://github.build.ge.com/212408509/px-navbar-design.git#~0.0.1",
-    "px-clearfix-design": "https://github.build.ge.com/PXd/px-clearfix-design.git#~0.2.0",
-    "px-helpers-design": "https://github.build.ge.com/PXd/px-helpers-design.git#~0.2.4",
-    "px-button-group-design": "https://github.build.ge.com/PXd/px-button-group-design.git#~0.3.5",
+    "eq.js": "~1.7.0",
     "iron-component-page": "PolymerElements/iron-component-page#~v1.0.4",
-    "px-starter-kit-design": "https://github.build.ge.com/PXd/px-starter-kit-design.git#~0.4.1",
-    "px-buttons-design": "https://github.build.ge.com/PXd/px-buttons-design.git#~0.4.4",
-    "px-input-group-design": "https://github.build.ge.com/PXd/px-input-group-design.git#~0.2.0",
-    "px-forms-design": "https://github.build.ge.com/PXd/px-forms-design.git#~0.3.4",
-    "px-layout-design": "https://github.build.ge.com/PXd/px-layout-design.git#~0.3.4",
-    "px-toggle-design": "https://github.build.ge.com/PXd/px-toggle-design.git#~0.2.4"
+    "px-card": "https://github.build.ge.com/Predix-Experience/px-card.git#~0.0.1",
+    "px-layout-design": "https://github.build.ge.com/PXd/px-layout-design.git#~0.3.0",
+    "px-starter-kit-design": "https://github.build.ge.com/PXd/px-starter-kit-design.git#~0.4.0",
+    "px-theme": "https://github.build.ge.com/PXc/px-theme.git#~v0.2.0"
   }
 }
