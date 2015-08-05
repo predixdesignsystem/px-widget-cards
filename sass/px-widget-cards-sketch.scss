@@ -9,25 +9,15 @@
  */
 
 //
-// Sass for the "sketch" notion of the px-sample-cards component
+// Sass for the "sketch" notion of the px-widget-cards component
 //
 // @author
 //
 
 /*
 THIS FILE SHOULD CONTAIN ONLY ABSTRACT/'SKETCH' THEME RULES, NOT SPECIFIC TO PREDIX BRANDING
-Predix branding rules go in px-sample-cards-predix.scss, not in this file.
+Predix branding rules go in px-widget-cards-predix.scss, not in this file.
 */
-
-
-/*
-See https://github.sw.ge.com/pxc/px-getting-started#a-note-about-relative-import-paths for an explanation of the `../`
-in import paths
-*/
-
-// Settings
-@import "px-defaults-design/_settings.defaults.scss";
-@import "px-colors-design/_settings.colors.scss";
 
 // Generic
 @import "px-normalize-design/_generic.normalize.scss";
@@ -35,31 +25,77 @@ in import paths
 @import "px-helpers-design/_generic.helpers.scss";
 
 // Base
+@import "px-viewport-design/_base.viewport.scss";
 @import "px-flexbox-design/_base.flexbox.scss";
 @import "px-typography-design/_base.typography.scss";
-@import "px-iconography-design/_base.iconography.scss";
-
-$inuit-enable-input--regular            : true;
-
-@import "px-forms-design/_base.forms.scss";
 
 // Objects
+$inuit-enable-layout--flush     : true;
+$inuit-enable-layout--full      : true;
 
-$inuit-enable-btn--huge                 : true;
-$inuit-enable-btn--icon                 : true;
-$inuit-enable-btn--primary              : true;
-
-@import "px-buttons-design/_objects.buttons.scss";
 @import "px-layout-design/_objects.layout.scss";
 
-$inuit-enable-toggle--large             : true;
+// Component
+.layout--widget > {
+  .#{$inuit-layout-namespace}layout__item,
+  %#{$inuit-layout-namespace}layout__item {
+    border-bottom: 1px solid;
+    &:nth-last-child(-n+6):first-child,
+    &:nth-last-child(-n+6):first-child ~ .layout__item {
+      flex-basis: calculateRem(300px);
+      @include media-query(desk-wide) {
+        flex-basis: 33% !important;
+      }
+    }
+    @include media-query(desk-wide) {
+      border-bottom: 0;
+    }
+  }
+}
 
-@import "px-toggle-design/_objects.toggle.scss";
-@import "px-input-group-design/_objects.input-group.scss";
+::content {
+  [class^="widget-"] {
+    padding-top: $inuit-base-spacing-unit--large;
+    padding-bottom: $inuit-base-spacing-unit--huge;
+  }
+  .widget-1 {
+    padding-left: 0;
+  }
+}
 
-// Spacing
-$inuit-enable-margins--none             : true;
-$inuit-enable-margins--huge             : true;
-$inuit-enable-paddings--large           : true;
+[data-eq-state$="small"], [data-eq-state$="large"] {
+  .layout__item {
+    &:nth-child(odd) ::content [class^="widget-"] {
+      border-right: 1px solid;
+      padding-right: $inuit-base-spacing-unit--large;
+    }
+    &:nth-child(even) ::content [class^="widget-"] {
+      padding-left: $inuit-base-spacing-unit--large;
+    }
+  }
+}
+
+.six-up [data-eq-state$="large"] .layout__item ::content {
+  .widget-2, .widget-5 {
+    border-right: 1px solid;
+    padding-right: $inuit-base-spacing-unit--large;
+  }
+  .widget-4 {
+    border-right: 1px solid;
+    padding-right: $inuit-base-spacing-unit--large;
+    padding-left: 0;
+  }
+  .widget-3, .widget-6 {
+    border-right: 0;
+    padding-right: 0;
+    padding-left: $inuit-base-spacing-unit--large;
+  }
+  .widget-5 {
+    padding-left: $inuit-base-spacing-unit--large;
+  }
+}
+
+// Trumps
+$inuit-enable-margins--negative : true;
 
 @import "px-spacing-design/_trumps.spacing.scss"
