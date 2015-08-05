@@ -1,6 +1,6 @@
 {
   "name": "px-widget-cards",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": [
     "px-widget-cards.html"
   ],
@@ -14,15 +14,15 @@
     "test"
   ],
   "dependencies": {
+    "eq.js": "~1.7.0",
     "polymer": "~v1.0.3",
-    "px-iconography-design": "https://github.build.ge.com/PXd/px-iconography-design.git#~0.2.4"
+    "px-card": "https://github.build.ge.com/Predix-Experience/px-card.git#~0.0.1",
+    "px-iconography-design": "https://github.build.ge.com/PXd/px-iconography-design.git#~0.2.4",
+    "px-theme": "https://github.build.ge.com/PXc/px-theme.git#~v0.2.0"
   },
   "devDependencies": {
-    "eq.js": "~1.7.0",
     "iron-component-page": "PolymerElements/iron-component-page#~v1.0.4",
-    "px-card": "https://github.build.ge.com/Predix-Experience/px-card.git#~0.0.1",
     "px-layout-design": "https://github.build.ge.com/PXd/px-layout-design.git#~0.3.0",
-    "px-starter-kit-design": "https://github.build.ge.com/PXd/px-starter-kit-design.git#~0.4.0",
-    "px-theme": "https://github.build.ge.com/PXc/px-theme.git#~v0.2.0"
+    "px-starter-kit-design": "https://github.build.ge.com/PXd/px-starter-kit-design.git#~0.4.0"
   }
 }
