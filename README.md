@@ -3,7 +3,7 @@ px-widget-cards
 
 ## Overview
 
-px-widget-cards is a Predix Experience ('Px') component
+px-widget-cards is a Predix Experience ('Px') component. Use the 'two-up', 'four-up' and 'six-up' components to create cards with two, four or six components laid out in a grid (see demo.html for usage and running example).
 
 ## Getting Started
 
@@ -27,18 +27,6 @@ $ grunt depserve
 
 Starts a local server. Navigate to the root of that server (e.g. http://localhost:8080/) in a browser to open the API documentation page, with link to the "Demo" / working examples.
 
-### Options
-
-Does this component have runtime configuration options?  If so, they should be able to be passed as attributes on the element with examples shown below.
-
-### Function calls
-
-What is the public API of this component?
-
-### Extending styles
-
-Documented CSS extension points?
-
 ### Extending behavior
 
 See Polymer composition patterns
@@ -50,4 +38,3 @@ GE Coding Style Guide
 
 
 ### Known Issues
-
