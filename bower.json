@@ -1,6 +1,6 @@
 {
   "name": "px-widget-cards",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": [
     "px-widget-cards.html"
   ],
