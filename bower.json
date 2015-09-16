@@ -1,6 +1,6 @@
 {
   "name": "px-widget-cards",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": [
     "px-widget-cards.html"
   ],
@@ -16,7 +16,7 @@
   "dependencies": {
     "eq.js": "~1.7.0",
     "polymer": "~v1.0.3",
-    "px-card": "https://github.build.ge.com/Predix-Experience/px-card.git#~0.0.12",
+    "px-card": "https://github.build.ge.com/Predix-Experience/px-card.git#~0.0.15",
     "px-iconography-design": "https://github.build.ge.com/PXd/px-iconography-design.git#~0.2.4",
     "px-theme": "https://github.build.ge.com/PXc/px-theme.git#~v0.2.11"
   },
