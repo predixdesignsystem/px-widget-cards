@@ -3,7 +3,7 @@
 
 <script src="../eq.js/dist/eq.min.js"></script>
 
-<dom-module id="two-up">
+<dom-module id="px-twoup">
   <link rel="import" type="css" href="css/px-widget-cards.css">
   <template>
     <px-card header-text="{{widgetHeader}}" icon="{{widgetIcon}}">
@@ -20,8 +20,8 @@
 </dom-module>
 <script>
   Polymer({
-    is: 'two-up',
-    ready: function() {
+    is: 'px-twoup',
+    attached: function() {
       eqjs.refreshNodes();
       eqjs.query(undefined, true);
     }
