@@ -58,6 +58,7 @@ $inuit-enable-layout--full      : true;
 
 ::content {
   [class^="widget-"] {
+    width: 100%;
     padding-top: $inuit-base-spacing-unit--large;
     padding-bottom: $inuit-base-spacing-unit--huge;
   }
@@ -80,7 +81,7 @@ $inuit-enable-layout--full      : true;
   }
 }
 
-.two-up {
+.px-twoup {
   [data-eq-state$="small"], [data-eq-state$="large"] {
     .#{$inuit-layout-namespace}layout__item,
     %#{$inuit-layout-namespace}layout__item {
@@ -89,7 +90,7 @@ $inuit-enable-layout--full      : true;
   }
 }
 
-.two-up > {
+.px-twoup > {
   .#{$inuit-layout-namespace}layout__item,
   %#{$inuit-layout-namespace}layout__item {
     @include media-query(desk-wide) {
@@ -100,7 +101,7 @@ $inuit-enable-layout--full      : true;
   }
 }
 
-.four-up.layout--widget {
+.px-fourup.layout--widget {
    > {
     .#{$inuit-layout-namespace}layout__item,
     %#{$inuit-layout-namespace}layout__item {
@@ -118,7 +119,7 @@ $inuit-enable-layout--full      : true;
   }
 }
 
-.four-up {
+.px-fourup {
   &[data-eq-state$="small"], &[data-eq-state$="large"] {
     &:last-child > {
       .#{$inuit-layout-namespace}layout__item,
@@ -129,7 +130,7 @@ $inuit-enable-layout--full      : true;
   }
 }
 
-.six-up [data-eq-state$="small"] {
+.px-sixup [data-eq-state$="small"] {
   .#{$inuit-layout-namespace}layout__item,
   %#{$inuit-layout-namespace}layout__item {
     &:nth-child(1n+5) {
@@ -138,7 +139,7 @@ $inuit-enable-layout--full      : true;
   }
 }
 
-.six-up [data-eq-state$="large"] {
+.px-sixup [data-eq-state$="large"] {
   .#{$inuit-layout-namespace}layout__item,
   %#{$inuit-layout-namespace}layout__item {
     &:nth-child(1n+4) {
