@@ -1,0 +1,175 @@
+/*
+ * Copyright (c) 2014 GE Global Research. All rights reserved.
+ *
+ * The copyright to the computer software herein is the property of
+ * GE Global Research. The software may be used and/or copied only
+ * with the written permission of GE Global Research or in accordance
+ * with the terms and conditions stipulated in the agreement/contract
+ * under which the software has been supplied.
+ */
+
+//
+// Sass for the "sketch" notion of the px-widget-cards component
+//
+// @author
+//
+
+/*
+THIS FILE SHOULD CONTAIN ONLY ABSTRACT/'SKETCH' THEME RULES, NOT SPECIFIC TO PREDIX BRANDING
+Predix branding rules go in px-widget-cards-predix.scss, not in this file.
+*/
+
+// Settings
+@import "px-colors-design/_settings.colors.scss";
+
+// Generic
+@import "px-normalize-design/_generic.normalize.scss";
+@import "px-box-sizing-design/_generic.box-sizing.scss";
+@import "px-helpers-design/_generic.helpers.scss";
+
+// Base
+@import "px-viewport-design/_base.viewport.scss";
+@import "px-flexbox-design/_base.flexbox.scss";
+
+// Objects
+$inuit-enable-layout--flush     : true;
+$inuit-enable-layout--full      : true;
+
+@import "px-layout-design/_objects.layout.scss";
+
+// Component
+.layout--widget > {
+  .#{$inuit-layout-namespace}layout__item,
+  %#{$inuit-layout-namespace}layout__item {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    &:last-child {
+      border-bottom: 0;
+    }
+    &:nth-last-child(-n+6):first-child,
+    &:nth-last-child(-n+6):first-child ~ .layout__item {
+      flex-basis: calculateRem(300px);
+      @include media-query(desk-wide) {
+        flex-basis: 33% !important;
+      }
+    }
+  }
+}
+
+::content {
+  [class^="widget-"] {
+    width: 100%;
+    padding-top: $inuit-base-spacing-unit--large;
+    padding-bottom: $inuit-base-spacing-unit--huge;
+  }
+  .widget-1 {
+    padding-left: 0;
+  }
+}
+
+[data-eq-state$="small"], [data-eq-state$="large"] {
+  .#{$inuit-layout-namespace}layout__item,
+  %#{$inuit-layout-namespace}layout__item {
+    &:nth-child(odd) ::content [class^="widget-"] {
+      border-right-width: 1px;
+      border-right-style: solid;
+      padding-right: $inuit-base-spacing-unit--large;
+    }
+    &:nth-child(even) ::content [class^="widget-"] {
+      padding-left: $inuit-base-spacing-unit--large;
+    }
+  }
+}
+
+.px-twoup {
+  [data-eq-state$="small"], [data-eq-state$="large"] {
+    .#{$inuit-layout-namespace}layout__item,
+    %#{$inuit-layout-namespace}layout__item {
+      border-bottom: 0;
+    }
+  }
+}
+
+.px-twoup > {
+  .#{$inuit-layout-namespace}layout__item,
+  %#{$inuit-layout-namespace}layout__item {
+    @include media-query(desk-wide) {
+      & {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+.px-fourup.layout--widget {
+   > {
+    .#{$inuit-layout-namespace}layout__item,
+    %#{$inuit-layout-namespace}layout__item {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+    }
+  }
+  &:last-child > {
+    .#{$inuit-layout-namespace}layout__item,
+    %#{$inuit-layout-namespace}layout__item {
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+.px-fourup {
+  &[data-eq-state$="small"], &[data-eq-state$="large"] {
+    &:last-child > {
+      .#{$inuit-layout-namespace}layout__item,
+      %#{$inuit-layout-namespace}layout__item {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+.px-sixup [data-eq-state$="small"] {
+  .#{$inuit-layout-namespace}layout__item,
+  %#{$inuit-layout-namespace}layout__item {
+    &:nth-child(1n+5) {
+      border-bottom: 0;
+    }
+  }
+}
+
+.px-sixup [data-eq-state$="large"] {
+  .#{$inuit-layout-namespace}layout__item,
+  %#{$inuit-layout-namespace}layout__item {
+    &:nth-child(1n+4) {
+      border-bottom: 0;
+    }
+    ::content {
+      .widget-2, .widget-5 {
+        border-right-width: 1px;
+        border-right-style: solid;
+        padding-right: $inuit-base-spacing-unit--large;
+      }
+      .widget-4 {
+        border-right-width: 1px;
+        border-right-style: solid;
+        padding-right: $inuit-base-spacing-unit--large;
+        padding-left: 0;
+      }
+      .widget-3, .widget-6 {
+        border-right: 0;
+        padding-right: 0;
+        padding-left: $inuit-base-spacing-unit--large;
+      }
+      .widget-5 {
+        padding-left: $inuit-base-spacing-unit--large;
+      }
+    }
+  }
+}
+
+// Trumps
+$inuit-enable-margins--negative : true;
+
+@import "px-spacing-design/_trumps.spacing.scss"

@@ -1,0 +1,37 @@
+<link rel="import" href="../polymer/polymer.html" />
+<link rel="import" href="../px-card/px-card.html" />
+
+<script src="../eq.js/dist/eq.min.js"></script>
+
+<dom-module id="px-fourup">
+  <link rel="import" type="css" href="css/px-widget-cards.css">
+  <template>
+    <px-card header-text="{{widgetHeader}}" icon="{{widgetIcon}}">
+      <div class="layout layout--flush layout--full layout--widget u--mt" data-eq-pts="small: 600, large: 900">
+        <div class=layout__item>
+          <content select=".widget-1"></content>
+        </div>
+        <div class=layout__item>
+          <content select=".widget-2"></content>
+        </div>
+      </div>
+      <div class="layout layout--flush layout--full layout--widget" data-eq-pts="small: 600, large: 900">
+        <div class=layout__item>
+          <content select=".widget-3"></content>
+        </div>
+        <div class=layout__item>
+          <content select=".widget-4"></content>
+        </div>
+      </div>
+    </px-card>
+  </template>
+</dom-module>
+<script>
+  Polymer({
+    is: 'px-fourup',
+    attached: function() {
+      eqjs.refreshNodes();
+      eqjs.query(undefined, true);
+    }
+  });
+</script>
