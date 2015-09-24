@@ -7,7 +7,7 @@ px-widget-cards is a Predix Experience ('Px') component. Use the 'px-twoup', 'px
 
 ## Getting Started
 
-Read https://github.com/pages/PX/technical-principles/
+
 
 From the component's directory...
 
