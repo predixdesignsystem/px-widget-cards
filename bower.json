@@ -1,6 +1,6 @@
 {
   "name": "px-widget-cards",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": [
     "px-widget-cards.html"
   ],
@@ -16,7 +16,7 @@
   "dependencies": {
     "eq.js": "~1.7.0",
     "polymer": "~v1.0.3",
-    "px-card": "https://github.com/PredixDev/px-card.git#~0.0.15",
+    "px-card": "https://github.com/PredixDev/px-card.git#~v0.1.0",
     "px-theme": "https://github.com/PredixDev/px-theme.git#~v0.3.0"
   },
   "devDependencies": {
