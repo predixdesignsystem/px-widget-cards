@@ -221,9 +221,7 @@ html {
   /*! Comment to prevent cssmin munging this rule with html above and borking Safari */
   box-sizing: border-box; }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit; }
 
 /**
@@ -248,15 +246,13 @@ a {
   /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */ }
-  a:link,
-  a:visited {
+  a:link, a:visited {
     color: #3e87e8; }
   a:hover {
     color: #3573c5; }
   a:active {
     color: #2b5ea2; }
-  a:active,
-  a:hover {
+  a:active, a:hover {
     outline: 0; }
 
 /**
@@ -339,9 +335,9 @@ a {
   padding: 0 !important;
   clip: rect(0 0 0 0) !important; }
 
-.a11y.focusable:active,
-.a11y.focusable:focus,
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+.a11y.focusable:active, .a11y.focusable:focus,
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
   position: static;
   overflow: visible;
   width: auto;
@@ -690,18 +686,15 @@ a {
 ::content .widget-1 {
   padding-left: 0; }
 
-[data-eq-state$="small"] .layout__item:nth-child(odd) ::content [class^="widget-"],
-[data-eq-state$="large"] .layout__item:nth-child(odd) ::content [class^="widget-"] {
+[data-eq-state$="small"] .layout__item:nth-child(odd) ::content [class^="widget-"], [data-eq-state$="large"] .layout__item:nth-child(odd) ::content [class^="widget-"] {
   border-right-width: 1px;
   border-right-style: solid;
   padding-right: 1.3333333333rem; }
 
-[data-eq-state$="small"] .layout__item:nth-child(even) ::content [class^="widget-"],
-[data-eq-state$="large"] .layout__item:nth-child(even) ::content [class^="widget-"] {
+[data-eq-state$="small"] .layout__item:nth-child(even) ::content [class^="widget-"], [data-eq-state$="large"] .layout__item:nth-child(even) ::content [class^="widget-"] {
   padding-left: 1.3333333333rem; }
 
-.px-twoup [data-eq-state$="small"] .layout__item,
-.px-twoup [data-eq-state$="large"] .layout__item {
+.px-twoup [data-eq-state$="small"] .layout__item, .px-twoup [data-eq-state$="large"] .layout__item {
   border-bottom: 0; }
 
 @media screen and (min-width: 80rem) {
@@ -743,8 +736,7 @@ a {
 .px-fourup.layout--widget:last-child > .layout__item:last-child {
   border-bottom: 0; }
 
-.px-fourup[data-eq-state$="small"]:last-child > .layout__item,
-.px-fourup[data-eq-state$="large"]:last-child > .layout__item {
+.px-fourup[data-eq-state$="small"]:last-child > .layout__item, .px-fourup[data-eq-state$="large"]:last-child > .layout__item {
   border-bottom: 0; }
 
 .px-sixup [data-eq-state$="small"] .layout__item:nth-child(1n+5) {
@@ -753,8 +745,7 @@ a {
 .px-sixup [data-eq-state$="large"] .layout__item:nth-child(1n+4) {
   border-bottom: 0; }
 
-.px-sixup [data-eq-state$="large"] .layout__item ::content .widget-2,
-.px-sixup [data-eq-state$="large"] .layout__item ::content .widget-5 {
+.px-sixup [data-eq-state$="large"] .layout__item ::content .widget-2, .px-sixup [data-eq-state$="large"] .layout__item ::content .widget-5 {
   border-right-width: 1px;
   border-right-style: solid;
   padding-right: 1.3333333333rem; }
@@ -765,8 +756,7 @@ a {
   padding-right: 1.3333333333rem;
   padding-left: 0; }
 
-.px-sixup [data-eq-state$="large"] .layout__item ::content .widget-3,
-.px-sixup [data-eq-state$="large"] .layout__item ::content .widget-6 {
+.px-sixup [data-eq-state$="large"] .layout__item ::content .widget-3, .px-sixup [data-eq-state$="large"] .layout__item ::content .widget-6 {
   border-right: 0;
   padding-right: 0;
   padding-left: 1.3333333333rem; }
