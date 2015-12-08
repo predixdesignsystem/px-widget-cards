@@ -30,6 +30,7 @@
         "$"         : true,
         "define"    : false,
         "angular": false,
-        "Polymer": false        
+        "Polymer": false,
+        "eqjs": false
     }
 }
