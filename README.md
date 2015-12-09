@@ -3,7 +3,7 @@ px-widget-cards
 
 ## Overview
 
-px-widget-cards is a Predix Experience ('Px') component. Use the 'px-twoup', 'px-fourup' and 'px-sixup' components to create cards with two, four or six components laid out in a grid (see demo.html for usage and running example).
+px-widget-cards is a Predix Experience ('Px') component. Use the 'px-twoup', 'px-threeup', 'px-fourup' and 'px-sixup' components to create cards with two, four or six components laid out in a grid (see demo.html for usage and running example).
 
 ## Getting Started
 
