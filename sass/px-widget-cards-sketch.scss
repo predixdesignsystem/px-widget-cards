@@ -50,7 +50,7 @@ $inuit-enable-layout--full      : true;
     &:nth-last-child(-n+6):first-child ~ .layout__item {
       flex-basis: calculateRem(300px);
       @include media-query(desk-wide) {
-        flex-basis: 33% !important;
+        flex-basis: 32% !important;
       }
     }
   }
@@ -66,7 +66,7 @@ $inuit-enable-layout--full      : true;
     }
     &:nth-last-child(-n+6):first-child,
     &:nth-last-child(-n+6):first-child ~ .px-threeup {
-      flex-basis: calculateRem(600px);
+      flex-basis: calculateRem(900px);
 
     }
   }
@@ -134,7 +134,7 @@ $inuit-enable-layout--full      : true;
   %#{$inuit-layout-namespace}layout__item {
     flex-basis: calculateRem(300px);
     @include media-query(desk-wide) {
-      flex-basis: 33% !important;
+      flex-basis: 32% !important;
     }
     border-bottom: 0;
     ::content {
@@ -163,7 +163,7 @@ $inuit-enable-layout--full      : true;
   %#{$inuit-layout-namespace}layout__item {
     flex-basis: calculateRem(300px);
     @include media-query(desk-wide) {
-      flex-basis: 33% !important;
+      flex-basis: 32% !important;
     }
     border-bottom: 0;
     ::content {
@@ -193,7 +193,9 @@ $inuit-enable-layout--full      : true;
 
 @media screen and (min-width: 80rem) {
  .px-threeup > .layout__item {
-   border-bottom: 0; } }
+   border-bottom: 0;
+   min-width:0px;
+ } }
 
 
 .px-threeup [data-eq-state$="large"] .layout__item ::content .widget-1 .label,
