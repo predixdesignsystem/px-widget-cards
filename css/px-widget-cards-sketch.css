@@ -674,9 +674,9 @@ a {
     @media screen and (min-width: 80rem) {
       .layout--widget > .layout__item:nth-last-child(-n+6):first-child,
       .layout--widget > .layout__item:nth-last-child(-n+6):first-child ~ .layout__item {
-        -webkit-flex-basis: 33% !important;
-            -ms-flex-preferred-size: 33% !important;
-                flex-basis: 33% !important; } }
+        -webkit-flex-basis: 32% !important;
+            -ms-flex-preferred-size: 32% !important;
+                flex-basis: 32% !important; } }
 
 .px-threeup .layout--widget > .layout__item {
   border-bottom-width: 1px;
@@ -685,9 +685,9 @@ a {
     border-bottom: 0; }
   .px-threeup .layout--widget > .layout__item:nth-last-child(-n+6):first-child,
   .px-threeup .layout--widget > .layout__item:nth-last-child(-n+6):first-child ~ .px-threeup {
-    -webkit-flex-basis: 40rem;
-        -ms-flex-preferred-size: 40rem;
-            flex-basis: 40rem; }
+    -webkit-flex-basis: 60rem;
+        -ms-flex-preferred-size: 60rem;
+            flex-basis: 60rem; }
 
 ::content [class^="widget-"] {
   width: 100%;
@@ -723,9 +723,9 @@ a {
   border-bottom: 0; }
   @media screen and (min-width: 80rem) {
     .px-threeup [data-eq-state$="small"] .layout__item {
-      -webkit-flex-basis: 33% !important;
-          -ms-flex-preferred-size: 33% !important;
-              flex-basis: 33% !important; } }
+      -webkit-flex-basis: 32% !important;
+          -ms-flex-preferred-size: 32% !important;
+              flex-basis: 32% !important; } }
   .px-threeup [data-eq-state$="small"] .layout__item ::content .widget-1 {
     border-bottom-width: 1px;
     border-bottom-style: solid;
@@ -747,9 +747,9 @@ a {
   border-bottom: 0; }
   @media screen and (min-width: 80rem) {
     .px-threeup [data-eq-state$="large"] .layout__item {
-      -webkit-flex-basis: 33% !important;
-          -ms-flex-preferred-size: 33% !important;
-              flex-basis: 33% !important; } }
+      -webkit-flex-basis: 32% !important;
+          -ms-flex-preferred-size: 32% !important;
+              flex-basis: 32% !important; } }
   .px-threeup [data-eq-state$="large"] .layout__item ::content .widget-1 {
     border-right-width: 1px;
     border-right-style: solid;
@@ -770,7 +770,8 @@ a {
 
 @media screen and (min-width: 80rem) {
   .px-threeup > .layout__item {
-    border-bottom: 0; } }
+    border-bottom: 0;
+    min-width: 0px; } }
 
 .px-threeup [data-eq-state$="large"] .layout__item ::content .widget-1 .label,
 .px-threeup [data-eq-state$="large"] .layout__item ::content .widget-2 .label,
