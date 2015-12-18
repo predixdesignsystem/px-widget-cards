@@ -66,7 +66,15 @@ module.exports = function (grunt) {
                 files: ['sass/**/*.scss'],
                 tasks: ['sass', 'autoprefixer'],
                 options: {
-                    interrupt: true
+                    interrupt: true,
+                    livereload: true
+                }
+            },
+            htmljs: {
+                files: ['*.html', '*.js'],
+                options: {
+                    interrupt: true,
+                    livereload: true
                 }
             }
         },
@@ -76,13 +84,20 @@ module.exports = function (grunt) {
                 open: '<%= depserveOpenUrl %>'
             }
         },
-
         webdriver: {
             options: {
                 specFiles: ['test/*spec.js']
             },
             local: {
                 webdrivers: ['chrome']
+            }
+        },
+        concurrent: {
+            devmode: {
+                tasks: ['watch', 'depserve'],
+                options: {
+                    logConcurrentOutput: true
+                }
             }
         }
     });
@@ -95,11 +110,16 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-dep-serve');
     grunt.loadNpmTasks('webdriver-support');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-concurrent');
 
     // Default task.
     grunt.registerTask('default', 'Basic build', [
         'sass',
         'autoprefixer'
+    ]);
+
+    grunt.registerTask('devmode', 'Development Mode', [
+        'concurrent:devmode'
     ]);
 
     // First run task.
