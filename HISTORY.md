@@ -1,3 +1,7 @@
+v1.2.9
+==================
+* updated README and index.html page
+
 v1.2.8
 ==================
 * took docs out of home page and put small explanation there.
