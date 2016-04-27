@@ -28,6 +28,6 @@ module.exports = {
     }
   },
   suites: [
-    'test/px-widget-cards-test-fixture.html'
+    'test/fixture.html'
   ]
 };
