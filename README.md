@@ -1,4 +1,4 @@
-#px-widget-cards
+#px-widget-cards [![Build Status](https://travis-ci.org/PredixDev/px-widget-cards.svg?branch=master)](https://travis-ci.org/PredixDev/px-widget-cards)
 
 ## Overview
 

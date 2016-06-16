@@ -1,3 +1,7 @@
+v1.4.0
+==================
+* Upgrade to Polymer 1.5.0
+
 v1.3.3
 ==================
 * added oss_notice to bower ignore
