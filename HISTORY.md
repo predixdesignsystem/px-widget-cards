@@ -1,3 +1,7 @@
+v1.4.2
+==================
+* vulcanizing old demo page as well
+
 v1.4.1
 ==================
 * added vulcanize to demo gh-pages
