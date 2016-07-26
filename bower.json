@@ -1,6 +1,6 @@
 {
   "name": "px-widget-cards",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "main": [
     "px-widget-cards.html"
   ],
@@ -12,17 +12,19 @@
     "bower_components",
     "node_modules",
     "test",
-    "OSS_Notice.pdf"
+    "OSS_Notice.pdf",
+    "scripts",
+    ".github"
   ],
   "dependencies": {
     "eq.js": "~1.7.0",
     "polymer": "^v1.5.0",
-    "px-card": "https://github.com/PredixDev/px-card.git#~0.4.0",
-    "px-theme": "https://github.com/PredixDev/px-theme.git#~v0.8.0"
+    "px-card": "~0.4.0",
+    "px-theme": "~v0.8.0"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#~v1.1.0",
-    "px-layout-design": "https://github.com/PredixDev/px-layout-design.git#~0.3.10",
-    "px-starter-kit-design": "https://github.com/PredixDev/px-starter-kit-design.git#~0.5.1"
+    "px-layout-design": "~0.3.10",
+    "px-starter-kit-design": "~0.5.1"
   }
 }
