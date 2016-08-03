@@ -1,6 +1,6 @@
 {
   "name": "px-widget-cards",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "main": [
     "px-widget-cards.html"
   ],
@@ -14,7 +14,8 @@
     "test",
     "OSS_Notice.pdf",
     "scripts",
-    ".github"
+    ".github",
+    "px-widget-cards.png"
   ],
   "dependencies": {
     "eq.js": "~1.7.0",

@@ -1,3 +1,7 @@
+v1.4.3
+==================
+* added screenshot & demo link to REAEME
+
 v1.4.2
 ==================
 * vulcanizing old demo page as well

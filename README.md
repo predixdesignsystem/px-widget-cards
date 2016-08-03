@@ -1,5 +1,7 @@
 #px-widget-cards [![Build Status](https://travis-ci.org/PredixDev/px-widget-cards.svg?branch=master)](https://travis-ci.org/PredixDev/px-widget-cards)
 
+[![px-widget-cards demo](px-widget-cards.png?raw=true)](https://predixdev.github.io/px-widget-cards)
+
 ## Overview
 
 px-widget-cards is a Predix UI component. Use the 'px-twoup', 'px-threeup', 'px-fourup' and 'px-sixup' components to create cards with two, three, four or six components laid out in a grid (see demo.html for usage and running example).
