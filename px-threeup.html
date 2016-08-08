@@ -25,8 +25,11 @@
   Polymer({
     is: 'px-threeup',
     attached: function() {
-      eqjs.refreshNodes();
-      eqjs.query(undefined, true);
+      //delay the element query from executing until px-card dimension is determined.
+      this.async(function(){
+        eqjs.refreshNodes();
+        eqjs.query(undefined, true);
+      },1);
     }
   });
 </script>
