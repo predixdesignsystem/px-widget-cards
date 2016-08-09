@@ -23,6 +23,10 @@ module.exports = {
           "browserName": "safari",
           "platform": "OS X 10.10",
           "version": "8"
+        }, {
+          "browserName": "firefox",
+          "platform": "OS X 10.10",
+          "version": "latest"
         }
       ]
     }
