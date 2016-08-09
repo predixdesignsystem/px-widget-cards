@@ -8,7 +8,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
 
         clean: {
-            css: ['css/noprefix'],
+            css: ['css'],
             bower: ['bower_components'],
             reports: ['reports']
         },
@@ -24,7 +24,9 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     'css/noprefix/px-widget-cards-sketch.css': 'sass/px-widget-cards-sketch.scss',
-                    'css/noprefix/px-widget-cards.css': 'sass/px-widget-cards-predix.scss'
+                    'css/noprefix/px-widget-cards.css': 'sass/px-widget-cards-predix.scss',
+                    'css/noprefix/px-widget-cards-demo.css': 'sass/px-widget-cards-demo.scss'
+
                 }
             }
         },
@@ -84,6 +86,7 @@ module.exports = function (grunt) {
                 open: '<%= depserveOpenUrl %>'
             }
         },
+
         webdriver: {
             options: {
                 specFiles: ['test/*spec.js']
@@ -92,6 +95,7 @@ module.exports = function (grunt) {
                 webdrivers: ['chrome']
             }
         },
+
         concurrent: {
             devmode: {
                 tasks: ['watch', 'depserve'],
@@ -100,6 +104,7 @@ module.exports = function (grunt) {
                 }
             }
         }
+
     });
 
     grunt.loadNpmTasks('grunt-sass');
