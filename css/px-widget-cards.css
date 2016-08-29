@@ -662,16 +662,6 @@ a {
         -ms-flex-preferred-size: 32% !important;
             flex-basis: 32% !important; } }
 
-.px-threeup .layout--widget > .layout__item {
-  border-bottom-width: 1px;
-  border-bottom-style: solid; }
-  .px-threeup .layout--widget > .layout__item:last-child {
-    border-bottom: 0; }
-  .px-threeup .layout--widget > .layout__item:nth-last-child(-n+6):first-child,
-  .px-threeup .layout--widget > .layout__item:nth-last-child(-n+6):first-child ~ .px-threeup {
-    -ms-flex-preferred-size: 60rem;
-        flex-basis: 60rem; }
-
 ::content [class^="widget-"] {
   width: 100%;
   padding-top: 1.3333333333rem;

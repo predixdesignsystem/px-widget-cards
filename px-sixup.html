@@ -8,22 +8,22 @@
   <template>
     <px-card header-text="{{widgetHeader}}" icon="{{widgetIcon}}">
       <div class="layout layout--flush layout--full layout--widget u--mt" data-eq-pts="small: 600, large: 900">
-        <div class=layout__item>
+        <div class="layout__item">
           <content select=".widget-1"></content>
         </div>
-        <div class=layout__item>
+        <div class="layout__item">
           <content select=".widget-2"></content>
         </div>
-        <div class=layout__item>
+        <div class="layout__item">
           <content select=".widget-3"></content>
         </div>
-        <div class=layout__item>
+        <div class="layout__item">
           <content select=".widget-4"></content>
         </div>
-        <div class=layout__item>
+        <div class="layout__item">
           <content select=".widget-5"></content>
         </div>
-        <div class=layout__item>
+        <div class="layout__item">
           <content select=".widget-6"></content>
         </div>
       </div>
@@ -34,15 +34,11 @@
   Polymer({
     is: 'px-sixup',
     attached: function() {
-      eqjs.refreshNodes();
-      eqjs.query(undefined, true);
+      //delay the element query from executing until px-card dimension is determined.
+      this.async(function(){
+        eqjs.refreshNodes();
+        eqjs.query(undefined, true);
+      },1);
     }
-  //   attached: function() {
-  //     //delay the element query from executing until px-card dimension is determined.
-  //     this.async(function(){
-  //       eqjs.refreshNodes();
-  //       eqjs.query(undefined, true);
-  //     },1);
-  //   }
   });
 </script>

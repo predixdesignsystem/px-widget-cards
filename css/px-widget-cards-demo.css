@@ -1109,8 +1109,6 @@ textarea {
   margin-right: 3.3333333333rem; }
 
 .demo {
-  -ms-flex-preferred-size: 26.6666666667rem;
-      flex-basis: 26.6666666667rem;
   background: white;
   border: 1px solid #d1d0d8;
   overflow: auto; }
