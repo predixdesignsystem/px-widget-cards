@@ -1,0 +1,138 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/5.8.0/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'npm',
+1 verbose cli   '-g' ]
+2 info using npm@3.7.3
+3 info using node@v5.8.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData npm
+8 silly fetchNamedPackageData npm
+9 silly mapToRegistry name npm
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/npm
+13 verbose request uri https://registry.npmjs.org/npm
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 11:49:58 AM
+16 verbose request id 4884e94a34c503ed
+17 verbose etag "DP2SBSPRFXXFGUOB88Y1RWFCL"
+18 http request GET https://registry.npmjs.org/npm
+19 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy-src.research.ge.com proxy-src.research.ge.com:8080
+20 info attempt registry request try #2 at 11:50:08 AM
+21 verbose etag "DP2SBSPRFXXFGUOB88Y1RWFCL"
+22 http request GET https://registry.npmjs.org/npm
+23 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy-src.research.ge.com proxy-src.research.ge.com:8080
+24 info attempt registry request try #3 at 11:51:08 AM
+25 verbose etag "DP2SBSPRFXXFGUOB88Y1RWFCL"
+26 http request GET https://registry.npmjs.org/npm
+27 silly get cb [ 304, undefined ]
+28 verbose etag https://registry.npmjs.org/npm from cache
+29 verbose get saving npm to /Users/212417951/.npm/registry.npmjs.org/npm/.cache.json
+30 verbose correctMkdir /Users/212417951/.npm correctMkdir not in flight; initializing
+31 silly install normalizeTree
+32 silly loadCurrentTree Finishing
+33 silly loadIdealTree Starting
+34 silly install loadIdealTree
+35 silly cloneCurrentTree Starting
+36 silly install cloneCurrentTreeToIdealTree
+37 silly cloneCurrentTree Finishing
+38 silly loadShrinkwrap Starting
+39 silly install loadShrinkwrap
+40 silly loadShrinkwrap Finishing
+41 silly loadAllDepsIntoIdealTree Starting
+42 silly install loadAllDepsIntoIdealTree
+43 silly resolveWithNewModule npm@3.8.1 checking installable status
+44 silly cache add args [ 'npm', null ]
+45 verbose cache add spec npm
+46 silly cache add parsed spec Result {
+46 silly cache add   raw: 'npm',
+46 silly cache add   scope: null,
+46 silly cache add   name: 'npm',
+46 silly cache add   rawSpec: '',
+46 silly cache add   spec: 'latest',
+46 silly cache add   type: 'tag' }
+47 silly addNamed npm@latest
+48 verbose addNamed "latest" is being treated as a dist-tag for npm
+49 info addNameTag [ 'npm', 'latest' ]
+50 silly mapToRegistry name npm
+51 silly mapToRegistry using default registry
+52 silly mapToRegistry registry https://registry.npmjs.org/
+53 silly mapToRegistry uri https://registry.npmjs.org/npm
+54 verbose addNameTag registry:https://registry.npmjs.org/npm not in flight; fetching
+55 verbose get https://registry.npmjs.org/npm not expired, no request
+56 silly addNameTag next cb for npm with tag latest
+57 silly addNamed npm@3.8.1
+58 verbose addNamed "3.8.1" is a plain semver version for npm
+59 silly mapToRegistry name npm
+60 silly mapToRegistry using default registry
+61 silly mapToRegistry registry https://registry.npmjs.org/
+62 silly mapToRegistry uri https://registry.npmjs.org/npm
+63 verbose addRemoteTarball https://registry.npmjs.org/npm/-/npm-3.8.1.tgz not in flight; adding
+64 verbose addRemoteTarball [ 'https://registry.npmjs.org/npm/-/npm-3.8.1.tgz',
+64 verbose addRemoteTarball   'ad8c6d9cb6218ab7e35858060a1fa87c87eef8a8' ]
+65 info retry fetch attempt 1 at 11:51:10 AM
+66 info attempt registry request try #1 at 11:51:10 AM
+67 http fetch GET https://registry.npmjs.org/npm/-/npm-3.8.1.tgz
+68 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy-src.research.ge.com proxy-src.research.ge.com:8080
+69 info attempt registry request try #2 at 11:51:20 AM
+70 http fetch GET https://registry.npmjs.org/npm/-/npm-3.8.1.tgz
+71 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy-src.research.ge.com proxy-src.research.ge.com:8080
+72 info attempt registry request try #3 at 11:52:20 AM
+73 http fetch GET https://registry.npmjs.org/npm/-/npm-3.8.1.tgz
+74 error fetch failed https://registry.npmjs.org/npm/-/npm-3.8.1.tgz
+75 warn retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy-src.research.ge.com proxy-src.research.ge.com:8080
+76 info retry fetch attempt 2 at 11:52:30 AM
+77 info attempt registry request try #1 at 11:52:30 AM
+78 http fetch GET https://registry.npmjs.org/npm/-/npm-3.8.1.tgz
+79 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy-src.research.ge.com proxy-src.research.ge.com:8080
+80 info attempt registry request try #2 at 11:52:40 AM
+81 http fetch GET https://registry.npmjs.org/npm/-/npm-3.8.1.tgz
+82 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy-src.research.ge.com proxy-src.research.ge.com:8080
+83 info attempt registry request try #3 at 11:53:40 AM
+84 http fetch GET https://registry.npmjs.org/npm/-/npm-3.8.1.tgz
+85 error fetch failed https://registry.npmjs.org/npm/-/npm-3.8.1.tgz
+86 warn retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy-src.research.ge.com proxy-src.research.ge.com:8080
+87 info retry fetch attempt 3 at 11:54:40 AM
+88 info attempt registry request try #1 at 11:54:40 AM
+89 http fetch GET https://registry.npmjs.org/npm/-/npm-3.8.1.tgz
+90 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy-src.research.ge.com proxy-src.research.ge.com:8080
+91 info attempt registry request try #2 at 11:54:50 AM
+92 http fetch GET https://registry.npmjs.org/npm/-/npm-3.8.1.tgz
+93 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy-src.research.ge.com proxy-src.research.ge.com:8080
+94 info attempt registry request try #3 at 11:55:50 AM
+95 http fetch GET https://registry.npmjs.org/npm/-/npm-3.8.1.tgz
+96 error fetch failed https://registry.npmjs.org/npm/-/npm-3.8.1.tgz
+97 silly rollbackFailedOptional Starting
+98 silly rollbackFailedOptional Finishing
+99 silly runTopLevelLifecycles Starting
+100 silly runTopLevelLifecycles Finishing
+101 silly install printInstalled
+102 verbose stack Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy-src.research.ge.com proxy-src.research.ge.com:8080
+102 verbose stack     at ClientRequest.onError (/usr/local/lib/node_modules/npm/node_modules/request/node_modules/tunnel-agent/index.js:176:17)
+102 verbose stack     at ClientRequest.g (events.js:273:16)
+102 verbose stack     at emitOne (events.js:90:13)
+102 verbose stack     at ClientRequest.emit (events.js:182:7)
+102 verbose stack     at Socket.socketErrorListener (_http_client.js:295:9)
+102 verbose stack     at emitOne (events.js:90:13)
+102 verbose stack     at Socket.emit (events.js:182:7)
+102 verbose stack     at connectErrorNT (net.js:992:8)
+102 verbose stack     at _combinedTickCallback (node.js:377:13)
+102 verbose stack     at process._tickCallback (node.js:401:11)
+103 verbose cwd /Users/212417951/Documents/menkhaus/DTech/grab_all_repos/px-widget-cards
+104 error Darwin 14.5.0
+105 error argv "/usr/local/Cellar/node/5.8.0/bin/node" "/usr/local/bin/npm" "install" "npm" "-g"
+106 error node v5.8.0
+107 error npm  v3.7.3
+108 error code ECONNRESET
+109 error network tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy-src.research.ge.com proxy-src.research.ge.com:8080
+110 error network This is most likely not a problem with npm itself
+110 error network and is related to network connectivity.
+110 error network In most cases you are behind a proxy or have bad network settings.
+110 error network
+110 error network If you are behind a proxy, please make sure that the
+110 error network 'proxy' config is set properly.  See: 'npm help config'
+111 verbose exit [ 1, true ]

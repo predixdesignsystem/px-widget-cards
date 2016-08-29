@@ -12,19 +12,13 @@
   <link rel="import" href="../px-tabs/px-tab-set.html" />
   <link rel="import" href="px-widget-cards.html"/>
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-  <link rel="import" href="../px-demo-snippet/px-demo-snippet.html">
-  <link rel="import" href="../polymer-font-awesome/polymer-font-awesome.html">
+  <link rel="import" href="../px-demo-snippet/px-demo-snippet.html"/>
+  <link rel="import" href="../polymer-font-awesome/polymer-font-awesome.html"/>
+  <link rel="import" href="../iron-demo-helpers/demo-snippet.html"/>
   <link rel="import" href="px-twoup.html" />
-
-  <style is="custom-style">
-    html {
-      font-size: 0.9375rem;
-    }
-
-    [class^="widget"] p {
-      margin: 0!important;
-    }
-  </style>
+  <link rel="import" href="px-threeup.html" />
+  <link rel="import" href="px-fourup.html" />
+  <link rel="import" href="px-sixup.html" />
   </head>
 
 <body>
@@ -41,9 +35,11 @@
     <div class="hero u-p++ text--shadow">
       <a class="actionable flex flex--right flex--middle" href="https://github.com/PredixDev/px-widget-cards" target="_blank"><iron-icon class="menu__open" icon="fa:fa-github"></iron-icon>View on Github</a>
   		<h1 class="delta">px-widget-cards</h1>
-  		<p>
-
-  		</p>
+      <div class="description-text">
+    		<p>
+          <!-- Discription text here -->
+    		</p>
+      </div>
   		<div class="flex">
   			<img class="u-mr--" src="https://img.shields.io/travis/PredixDev/px-widget-cards.svg?style=flat-square" alt="Travis"/>
   			<img class="u-mr--" src="https://img.shields.io/bower/v/px-widget-cards.svg?style=flat-square" alt="Bower"/>
@@ -57,7 +53,7 @@
       <div class="tabContainer u-pt++ u-pl++">
         <px-tab-set selected="{{selected}}" bare no-bottom-border>
           <template is="dom-repeat" items="{{optionsArray}}">
-            <px-tab></px-tab>
+            <px-tab>Option {{indexPlusOne(index)}}</px-tab>
           </template>
         </px-tab-set>
       </div>
@@ -66,16 +62,84 @@
           <section class="tab-page">
             <div class="mega-demo flex flex--wrap u-ph++ u-pb++">
 
-              <px-twoup id="widgetsx2" widget-header="2 Widget Card" widget-icon="fa-eye">
-                <div class=widget-1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <!-- Demo -->
+              <!-- <template is="dom-if" if="{{_isSecondTab(index)}}">
+                <div class="demoContainer u-mt+">
+                  <div class="flex flex--col">
+                    <div class="demo u-p+">
+
+                      <px-twoup id="widgetsx2" widget-header="2 Widget Card" widget-icon="fa-eye">
+                        <div class=widget-1>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div class=widget-2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                      </px-twoup>
+
+                    </div>
+                    <div>
+                      <px-demo-snippet
+                        element-properties={{item}}
+                        element-name="px-widget-cards">
+                      </px-demo-snippet>
+                    </div>
+                  </div>
                 </div>
-                <div class=widget-2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+              </template> -->
+
+              <!-- <template is="dom-if" if="{{_isFirstTab(index)}}"> -->
+                <div class="demoContainer u-mt+">
+                  <div class="flex flex--col">
+                    <div class="demo u-p+">
+
+                      <px-threeup id="widgetsx3" widget-header="3 Widget Card" widget-icon="fa-eye">
+                        <div class=widget-1>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div class=widget-2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                        <div class=widget-3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                      </px-threeup>
+
+                    </div>
+                    <div>
+                      <px-demo-snippet
+                        element-properties={{item}}
+                        element-name="px-widget-cards">
+                      </px-demo-snippet>
+                    </div>
+                  </div>
                 </div>
-              </px-twoup>
+
+              <!-- </template> -->
+
+                <!-- <template is="dom-if" if="{{_isSecondTab(index)}}">
+
+                  <px-threeup id="widgetsx3" widget-header="3 Widget Card" widget-icon="fa-eye">
+                    <div class=widget-1>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class=widget-2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <div class=widget-3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                  </px-threeup>
+
+                </template> -->
+
 
             </div>
           </section>
@@ -106,20 +170,45 @@
 <script>
 window.addEventListener('WebComponentsReady', function() {
   var template = document.querySelector('template[is=dom-bind]'),
+      items = [
+        {"key":"one","val":"light"},
+        {"key":"two","val":"dark"}
+      ],
       optionsArray = [
         {
-          menuItems: [{"icon": "fa-gear", "url":"/user-settings.html", "label": "Setting Item 1"}, {"icon": "fa-gear", "label": "Setting Item 2", "url":"/user-settings.html"}],
-          logoutUrl: "logged_out.html",
-          userInfoUrl: "userInfo.js"
+          "lightDomContent": '<px-twoup id="widgetsx2" widget-header="2 Widget Card" widget-icon="fa-eye"><div class=widget-1><p>Lorem ipsum...</p></div><div class=widget-2><p>Lorem ipsum ...</p></div></px-twoup>'
+        },
+        {
+          "lightDomContent": '<px-tab id="tab1">Bengal Tiger</px-tab><px-tab id="tab2">Black Spider Monkey</px-tab><px-tab id="tab3">Sumatran Elephant</px-tab><px-tab id="tab4">Ganges River Dolphin</px-tab>',
+          "bare": true
+        },
+        {
+          "lightDomContent": '<px-tab id="tab1">Bengal Tiger</px-tab><px-tab id="tab2">Black Spider Monkey</px-tab><px-tab id="tab3">Sumatran Elephant</px-tab><px-tab id="tab4">Ganges River Dolphin</px-tab>',
+          "bare": true,
+          "noBottomBorder": true
         }
       ],
       indexPlusOne = function(num) {
         return num + 1;
+      },
+      _isFirstTab = function(index) {
+        return index === 0;
+      },
+      _isSecondTab = function(index) {
+        return index === 1;
+      },
+      _isThirdTab = function(index) {
+        return index === 2;
       };
 
-  template.selected = "0";
-  template.optionsArray = optionsArray;
-  template.indexPlusOne = indexPlusOne;
+      template.selected = "0";
+      template.optionsArray = optionsArray;
+      template.indexPlusOne = indexPlusOne;
+      template.items = items;
+      template._isFirstTab = _isFirstTab;
+      template._isSecondTab = _isSecondTab;
+      template._isThirdTab = _isThirdTab;
+
 
 });
 </script>
