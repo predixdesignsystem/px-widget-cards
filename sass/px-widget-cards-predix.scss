@@ -22,10 +22,11 @@ common/abstract rules go in px-widget-cards-sketch.scss, not in this file.
 @import 'px-widget-cards-sketch.scss';
 
 // Component
-.layout--widget > .layout__item, .px-fourup:first-child .layout__item:last-child {
-  border-bottom-color: $gray5;
-}
+// .layout--widget > .layout__item, .px-fourup:first-child .layout__item:last-child {
+//   border-bottom-color: $gray5;
+// }
 
 .layout__item, ::content [class^="widget-"] {
+  border-bottom-color: $gray5;
   border-right-color: $gray5;
 }
