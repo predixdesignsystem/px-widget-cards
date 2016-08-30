@@ -15,29 +15,32 @@
   <link rel="import" href="../px-demo-snippet/px-demo-snippet.html"/>
   <link rel="import" href="../polymer-font-awesome/polymer-font-awesome.html"/>
   <link rel="import" href="../iron-demo-helpers/demo-snippet.html"/>
+  <link rel="import" href="../iron-demo-helpers/demo-pages-shared-styles.html"/>
   <link rel="import" href="px-twoup.html" />
   <link rel="import" href="px-threeup.html" />
   <link rel="import" href="px-fourup.html" />
   <link rel="import" href="px-sixup.html" />
   </head>
-
+  <style>
+    .grabContent {
+      margin-right: 10px;
+    }
+  </style>
 <body>
 
   <!-- Wrap elements with auto-binding template to -->
   <!-- allow use of Polymer bindings in main document -->
-  <template id="just-for-demo" is="dom-bind" >
-    <style>
-      .grabContent {
-        margin-right: 10px;
-      }
-    </style>
+
     <!-- discription -->
     <div class="hero u-p++ text--shadow">
       <a class="actionable flex flex--right flex--middle" href="https://github.com/PredixDev/px-widget-cards" target="_blank"><iron-icon class="menu__open" icon="fa:fa-github"></iron-icon>View on Github</a>
   		<h1 class="delta">px-widget-cards</h1>
       <div class="description-text">
     		<p>
-          <!-- Discription text here -->
+          Cards consist of a header area and content area, with a horizontal rule or border in between. The header can optionally contain a descriptive icon in the top left corner and/or a chevron button in the top right corner for configuration options or other menu items. Cards are incredibly flexible in terms of what widgets can be placed in the content area of the card and how they’re arranged, but a few preset configurations are provided – the 2-UP, 3-UP, 4-UP, and 6-UP card templates organize widgets in a responsive grid that adapts to various device sizes.
+        </p>
+        <p>
+          Cards are designed to be containers for an application’s content and functions. They reside within the content areas and must be associated with a context and a view.
     		</p>
       </div>
   		<div class="flex">
@@ -49,112 +52,96 @@
     <br />
 
     <!-- mega demo -->
-    <div style="position: relative;" class="u-pb++ flex flex--col" id="defaultTab">
-      <div class="tabContainer u-pt++ u-pl++">
-        <px-tab-set selected="{{selected}}" bare no-bottom-border>
-          <template is="dom-repeat" items="{{optionsArray}}">
-            <px-tab>Option {{indexPlusOne(index)}}</px-tab>
-          </template>
-        </px-tab-set>
-      </div>
-      <px-tab-pages selected="{{selected}}">
-        <template is="dom-repeat" items="{{optionsArray}}">
-          <section class="tab-page">
-            <div class="mega-demo flex flex--wrap u-ph++ u-pb++">
+    <div class="mega-demo u-p++">
 
-              <!-- Demo -->
-              <!-- <template is="dom-if" if="{{_isSecondTab(index)}}">
-                <div class="demoContainer u-mt+">
-                  <div class="flex flex--col">
-                    <div class="demo u-p+">
-
-                      <px-twoup id="widgetsx2" widget-header="2 Widget Card" widget-icon="fa-eye">
-                        <div class=widget-1>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                        <div class=widget-2>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        </div>
-                      </px-twoup>
-
-                    </div>
-                    <div>
-                      <px-demo-snippet
-                        element-properties={{item}}
-                        element-name="px-widget-cards">
-                      </px-demo-snippet>
-                    </div>
-                  </div>
-                </div>
-
-              </template> -->
-
-              <!-- <template is="dom-if" if="{{_isFirstTab(index)}}"> -->
-                <div class="demoContainer u-mt+">
-                  <div class="flex flex--col">
-                    <div class="demo u-p+">
-
-                      <px-sixup id="widgetsx6" widget-header="6 Widget Card" widget-icon="fa-briefcase">
-                        <div class=widget-1>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                        <div class=widget-2>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        </div>
-                        <div class=widget-3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                        <div class=widget-4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </div>
-                        <div class=widget-5>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                        <div class=widget-6>
-                          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                      </px-sixup>
-
-                    </div>
-                    <div>
-                      <px-demo-snippet
-                        element-properties={{item}}
-                        element-name="px-widget-cards">
-                      </px-demo-snippet>
-                    </div>
-                  </div>
-                </div>
-
-              <!-- </template> -->
-
-                <!-- <template is="dom-if" if="{{_isSecondTab(index)}}">
-
-                  <px-threeup id="widgetsx3" widget-header="3 Widget Card" widget-icon="fa-eye">
-                    <div class=widget-1>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                    <div class=widget-2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    </div>
-                    <div class=widget-3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    </div>
-                  </px-threeup>
-
-                </template> -->
-
-
+      <!-- Two UP -->
+      <demo-snippet>
+        <template>
+          <px-twoup id="widgetsx2" widget-header="2 Widget Card" widget-icon="fa-eye">
+            <div class=widget-1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-          </section>
+            <div class=widget-2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+          </px-twoup>
         </template>
-      </px-tab-pages>
+      </demo-snippet>
+
+      <!-- Three UP -->
+      <demo-snippet class="u-mt++">
+        <template>
+          <px-threeup id="widgetsx3" widget-header="3 Widget Card" widget-icon="fa-eye">
+            <div class=widget-1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class=widget-2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div class=widget-3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+          </px-threeup>
+        </template>
+      </demo-snippet>
+
+      <!-- Four UP -->
+      <demo-snippet class="u-mt++">
+        <template>
+          <px-fourup id="widgetsx4" widget-header="4 Widget Card" widget-icon="fa-eye">
+            <div class=widget-1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class=widget-2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div class=widget-3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class=widget-4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </px-fourup>
+        </template>
+      </demo-snippet>
+
+
+      <!-- Six UP -->
+      <demo-snippet class="u-mt++">
+        <template>
+          <px-sixup id="widgetsx6" widget-header="6 Widget Card" widget-icon="fa-briefcase">
+            <div class=widget-1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class=widget-2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div class=widget-3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class=widget-4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class=widget-5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class=widget-6>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </px-sixup>
+        </template>
+      </demo-snippet>
+
     </div>
+
     <footer class="footer flex flex--center">
       <div class="footer__container u-pv++">
         <div>
@@ -175,49 +162,6 @@
         </div>
       </div>
     </footer>
-  </template>
-<script>
-window.addEventListener('WebComponentsReady', function() {
-  var template = document.querySelector('template[is=dom-bind]'),
-      items = [
-        {"key":"one","val":"light"},
-        {"key":"two","val":"dark"}
-      ],
-      optionsArray = [
-        {
-          "lightDomContent": '<px-twoup id="widgetsx2" widget-header="2 Widget Card" widget-icon="fa-eye"><div class=widget-1><p>Lorem ipsum...</p></div><div class=widget-2><p>Lorem ipsum ...</p></div></px-twoup>'
-        },
-        {
-          "lightDomContent": ' ',
-        },
-        {
-          "lightDomContent": ' '
-        }
-      ],
-      indexPlusOne = function(num) {
-        return num + 1;
-      },
-      _isFirstTab = function(index) {
-        return index === 0;
-      },
-      _isSecondTab = function(index) {
-        return index === 1;
-      },
-      _isThirdTab = function(index) {
-        return index === 2;
-      };
-
-      template.selected = "0";
-      template.optionsArray = optionsArray;
-      template.indexPlusOne = indexPlusOne;
-      template.items = items;
-      template._isFirstTab = _isFirstTab;
-      template._isSecondTab = _isSecondTab;
-      template._isThirdTab = _isThirdTab;
-
-
-});
-</script>
 
 </body>
 </html>
