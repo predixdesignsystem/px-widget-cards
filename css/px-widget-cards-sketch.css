@@ -663,19 +663,18 @@ a {
 [data-eq-state$="small"] .layout__item:nth-child(even) ::content [class^="widget-"], [data-eq-state$="large"] .layout__item:nth-child(even) ::content [class^="widget-"] {
   padding-left: 1.3333333333rem; }
 
+/*
+ * Two Up
+ */
 .px-twoup [data-eq-state$="small"] .layout__item, .px-twoup [data-eq-state$="large"] .layout__item {
   border-bottom: 0; }
 
+/*
+ * Three Up
+ */
 .px-threeup
 [data-eq-state$="small"] .layout__item {
-  -ms-flex-preferred-size: 20rem;
-      flex-basis: 20rem;
   border-bottom: 0; }
-  @media screen and (min-width: 100%) {
-    .px-threeup
-[data-eq-state$="small"] .layout__item {
-      -ms-flex-preferred-size: 32% !important;
-          flex-basis: 32% !important; } }
   .px-threeup
 [data-eq-state$="small"] .layout__item ::content .widget-1 {
     border-bottom-width: 1px;
@@ -691,13 +690,7 @@ a {
     border-right: 0; }
 
 .px-threeup [data-eq-state$="large"] .layout__item {
-  -ms-flex-preferred-size: 20rem;
-      flex-basis: 20rem;
   border-bottom: 0; }
-  @media screen and (min-width: 100%) {
-    .px-threeup [data-eq-state$="large"] .layout__item {
-      -ms-flex-preferred-size: 32% !important;
-          flex-basis: 32% !important; } }
   .px-threeup [data-eq-state$="large"] .layout__item ::content .widget-1 {
     border-right-width: 1px;
     border-right-style: solid;
@@ -712,40 +705,48 @@ a {
     padding-right: 1.3333333333rem;
     border-right: 0; }
 
+/*
+ * Four Up
+ */
+.px-fourup[data-eq-state$="small"]:last-child > .layout__item, .px-fourup[data-eq-state$="large"]:last-child > .layout__item {
+  border-bottom: 0; }
+
+/*
+ * Six Up
+ */
+.px-sixup [data-eq-state$="small"] .layout__item:nth-child(1n+5) {
+  border-bottom: 0; }
+
+.px-sixup [data-eq-state$="large"] .layout__item {
+  -ms-flex-preferred-size: 32% !important;
+      flex-basis: 32% !important; }
+  .px-sixup [data-eq-state$="large"] .layout__item:nth-child(1n+4) {
+    border-bottom: 0; }
+  .px-sixup [data-eq-state$="large"] .layout__item ::content .widget-2, .px-sixup [data-eq-state$="large"] .layout__item ::content .widget-5 {
+    border-right-width: 1px;
+    border-right-style: solid;
+    padding-right: 1.3333333333rem; }
+  .px-sixup [data-eq-state$="large"] .layout__item ::content .widget-4 {
+    border-right-width: 1px;
+    border-right-style: solid;
+    padding-right: 1.3333333333rem;
+    padding-left: 0; }
+  .px-sixup [data-eq-state$="large"] .layout__item ::content .widget-3, .px-sixup [data-eq-state$="large"] .layout__item ::content .widget-6 {
+    border-right: 0;
+    padding-right: 0;
+    padding-left: 1.3333333333rem; }
+  .px-sixup [data-eq-state$="large"] .layout__item ::content .widget-5 {
+    padding-left: 1.3333333333rem; }
+
+/*
+ * All widget less than 600px
+ */
 .layout--widget > .layout__item {
   border-bottom-width: 1px;
   border-bottom-style: solid; }
 
 .layout--widget:last-child > .layout__item:last-child {
   border-bottom: 0; }
-
-.px-fourup[data-eq-state$="small"]:last-child > .layout__item, .px-fourup[data-eq-state$="large"]:last-child > .layout__item {
-  border-bottom: 0; }
-
-.px-sixup [data-eq-state$="small"] .layout__item:nth-child(1n+5) {
-  border-bottom: 0; }
-
-.px-sixup [data-eq-state$="large"] .layout__item:nth-child(1n+4) {
-  border-bottom: 0; }
-
-.px-sixup [data-eq-state$="large"] .layout__item ::content .widget-2, .px-sixup [data-eq-state$="large"] .layout__item ::content .widget-5 {
-  border-right-width: 1px;
-  border-right-style: solid;
-  padding-right: 1.3333333333rem; }
-
-.px-sixup [data-eq-state$="large"] .layout__item ::content .widget-4 {
-  border-right-width: 1px;
-  border-right-style: solid;
-  padding-right: 1.3333333333rem;
-  padding-left: 0; }
-
-.px-sixup [data-eq-state$="large"] .layout__item ::content .widget-3, .px-sixup [data-eq-state$="large"] .layout__item ::content .widget-6 {
-  border-right: 0;
-  padding-right: 0;
-  padding-left: 1.3333333333rem; }
-
-.px-sixup [data-eq-state$="large"] .layout__item ::content .widget-5 {
-  padding-left: 1.3333333333rem; }
 
 /**
  * Margin and padding helper classes. Use these to tweak layout on a micro

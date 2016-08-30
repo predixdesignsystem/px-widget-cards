@@ -43,9 +43,6 @@ $inuit-enable-layout--full      : true;
   %#{$inuit-layout-namespace}layout__item {
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    &:last-child {
-      // border-bottom: 0;
-    }
     &:nth-last-child(-n+6):first-child,
     &:nth-last-child(-n+6):first-child ~ .layout__item {
       flex-basis: calculateRem(300px);
@@ -81,6 +78,9 @@ $inuit-enable-layout--full      : true;
   }
 }
 
+/*
+ * Two Up
+ */
 .px-twoup {
   [data-eq-state$="small"], [data-eq-state$="large"] {
     .#{$inuit-layout-namespace}layout__item,
@@ -89,27 +89,14 @@ $inuit-enable-layout--full      : true;
     }
   }
 }
-//
-// .px-twoup > {
-//   .#{$inuit-layout-namespace}layout__item,
-//   %#{$inuit-layout-namespace}layout__item {
-//     @include media-query(desk-wide) {
-//       & {
-//         border-bottom: 0;
-//       }
-//     }
-//   }
-// }
 
-
+/*
+ * Three Up
+ */
 .px-threeup
   [data-eq-state$="small"]{
     .#{$inuit-layout-namespace}layout__item,
     %#{$inuit-layout-namespace}layout__item {
-      flex-basis: calculateRem(300px);
-      @include media-query(desk-wide) {
-        flex-basis: 32% !important;
-      }
       border-bottom: 0;
       ::content {
         .widget-1 {
@@ -128,15 +115,9 @@ $inuit-enable-layout--full      : true;
       }
     }
   }
-
-
 .px-threeup [data-eq-state$="large"] {
   .#{$inuit-layout-namespace}layout__item,
   %#{$inuit-layout-namespace}layout__item {
-    flex-basis: calculateRem(300px);
-    @include media-query(desk-wide) {
-      flex-basis: 32% !important;
-    }
     border-bottom: 0;
     ::content {
       .widget-1 {
@@ -159,32 +140,9 @@ $inuit-enable-layout--full      : true;
   }
 }
 
-//
-// @media screen and (min-width: 80rem) {
-//  .px-threeup > .layout__item {
-//    border-bottom: 0;
-//    min-width:0px;
-//  } }
-
-
-.layout--widget {
-   > {
-    .#{$inuit-layout-namespace}layout__item,
-    %#{$inuit-layout-namespace}layout__item {
-      border-bottom-width: 1px;
-      border-bottom-style: solid;
-    }
-  }
-  &:last-child > {
-    .#{$inuit-layout-namespace}layout__item,
-    %#{$inuit-layout-namespace}layout__item {
-      &:last-child {
-        border-bottom: 0;
-      }
-    }
-  }
-}
-
+/*
+ * Four Up
+ */
 .px-fourup {
   &[data-eq-state$="small"], &[data-eq-state$="large"] {
     &:last-child > {
@@ -196,6 +154,9 @@ $inuit-enable-layout--full      : true;
   }
 }
 
+/*
+ * Six Up
+ */
 .px-sixup [data-eq-state$="small"] {
   .#{$inuit-layout-namespace}layout__item,
   %#{$inuit-layout-namespace}layout__item {
@@ -204,13 +165,13 @@ $inuit-enable-layout--full      : true;
     }
   }
 }
-
 .px-sixup [data-eq-state$="large"] {
   .#{$inuit-layout-namespace}layout__item,
   %#{$inuit-layout-namespace}layout__item {
     &:nth-child(1n+4) {
       border-bottom: 0;
     }
+    flex-basis: 32% !important;
     ::content {
       .widget-2, .widget-5 {
         border-right-width: 1px;
@@ -230,6 +191,27 @@ $inuit-enable-layout--full      : true;
       }
       .widget-5 {
         padding-left: $inuit-base-spacing-unit--large;
+      }
+    }
+  }
+}
+
+/*
+ * All widget less than 600px
+ */
+.layout--widget {
+   > {
+    .#{$inuit-layout-namespace}layout__item,
+    %#{$inuit-layout-namespace}layout__item {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+    }
+  }
+  &:last-child > {
+    .#{$inuit-layout-namespace}layout__item,
+    %#{$inuit-layout-namespace}layout__item {
+      &:last-child {
+        border-bottom: 0;
       }
     }
   }
