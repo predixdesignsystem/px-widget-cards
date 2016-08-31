@@ -1,3 +1,7 @@
+v2.0.0
+==================
+* Removed a significant amount of sass to fix bugs. Also updated to new demo style  
+
 v1.4.3
 ==================
 * added screenshot & demo link to REAEME

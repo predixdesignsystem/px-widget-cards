@@ -1,6 +1,6 @@
 {
   "name": "px-widget-cards",
-  "version": "1.4.4",
+  "version": "2.0.0",
   "main": [
     "px-widget-cards.html"
   ],
@@ -36,7 +36,7 @@
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.2.5",
     "px-tabs": "~0.4.0",
     "px-api-viewer": "^0.0.1",
-    "px-demo-snippet": "^0.1.0",
+    "px-demo-snippet": "^0.4.0",
     "px-list-inline-design": "^0.2.11",
     "px-toggle-design": "^0.2.12",
     "px-headings-design": "^0.2.14",
@@ -45,5 +45,12 @@
     "px-dropdown": "^0.10.2",
     "px-polymer-font-awesome": "^0.1.8",
     "px-flexbox-design": "^0.3.9"
+  },
+  "resolutions": {
+    "iron-ajax": "^1.4.3",
+    "px-theme": "~1.1.2",
+    "px-clipboard": "^0.1.1",
+    "px-demo-snippet": "^0.5.1",
+    "px-typography-design": "^1.1.0"
   }
 }

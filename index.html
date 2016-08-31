@@ -25,11 +25,15 @@
     .grabContent {
       margin-right: 10px;
     }
+    /*p{
+      margin: auto;
+    }*/
   </style>
 <body>
 
   <!-- Wrap elements with auto-binding template to -->
   <!-- allow use of Polymer bindings in main document -->
+  <template id="just-for-demo" is="dom-bind" >
 
     <!-- discription -->
     <div class="hero u-p++ text--shadow">
@@ -55,22 +59,31 @@
     <div class="mega-demo u-p++">
 
       <!-- Two UP -->
-      <demo-snippet>
-        <template>
+        <div class="demo">
+
           <px-twoup id="widgetsx2" widget-header="2 Widget Card" widget-icon="fa-eye">
-            <div class=widget-1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="widget-1">
+              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
             </div>
-            <div class=widget-2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <div class="widget-2">
+              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
             </div>
           </px-twoup>
+
+        </div>
+          <div>
+            <px-demo-snippet
+              element-properties="[[elemprop]]"
+              element-name="px-twoup"
+              parent-name="px-data-table">
+            </px-demo-snippet>
+          </div>
         </template>
-      </demo-snippet>
 
       <!-- Three UP -->
-      <demo-snippet class="u-mt++">
+      <!-- <demo-snippet class="u-mt++">
         <template>
+
           <px-threeup id="widgetsx3" widget-header="3 Widget Card" widget-icon="fa-eye">
             <div class=widget-1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
@@ -85,11 +98,12 @@
                 dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             </div>
           </px-threeup>
+
         </template>
-      </demo-snippet>
+      </demo-snippet> -->
 
       <!-- Four UP -->
-      <demo-snippet class="u-mt++">
+      <!-- <demo-snippet class="u-mt++">
         <template>
           <px-fourup id="widgetsx4" widget-header="4 Widget Card" widget-icon="fa-eye">
             <div class=widget-1>
@@ -108,11 +122,10 @@
             </div>
           </px-fourup>
         </template>
-      </demo-snippet>
-
+      </demo-snippet> -->
 
       <!-- Six UP -->
-      <demo-snippet class="u-mt++">
+      <!-- <demo-snippet class="u-mt++">
         <template>
           <px-sixup id="widgetsx6" widget-header="6 Widget Card" widget-icon="fa-briefcase">
             <div class=widget-1>
@@ -138,7 +151,7 @@
             </div>
           </px-sixup>
         </template>
-      </demo-snippet>
+      </demo-snippet> -->
 
     </div>
 
@@ -163,5 +176,17 @@
       </div>
     </footer>
 
+  <script>
+    window.addEventListener('WebComponentsReady', function() {
+      var template = document.querySelector('template[is=dom-bind]'),
+          elemprop = {
+            "id": "widget-2",
+            "widget-header":"2 Widget Card",
+            "widget-icon":"fa-eye",
+            "lightDomContent": "<div class='widget-1'><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></div><div class='widget-2'><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span></div>"
+          };
+      template.elemprop = elemprop;
+    });
+  </script>
 </body>
 </html>
