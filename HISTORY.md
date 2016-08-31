@@ -1,6 +1,6 @@
 v2.0.0
 ==================
-* Removed a significant amount of sass to fix bugs. Also updated to new demo style  
+* Removed a significant amount of sass to fix bugs. Also updated to new demo style with codepen
 
 v1.4.3
 ==================
