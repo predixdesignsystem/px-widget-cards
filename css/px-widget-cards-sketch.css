@@ -690,11 +690,11 @@ a {
     border-right: 0; }
 
 .px-threeup [data-eq-state$="large"] .layout__item {
-  border-bottom: 0; }
+  border-bottom: 0;
+  padding-bottom: 0; }
   .px-threeup [data-eq-state$="large"] .layout__item ::content .widget-1 {
     border-right-width: 1px;
     border-right-style: solid;
-    padding-left: 1.3333333333rem;
     padding-right: 1.3333333333rem; }
   .px-threeup [data-eq-state$="large"] .layout__item ::content .widget-2 {
     border-right-width: 1px;
@@ -710,6 +710,8 @@ a {
  */
 .px-fourup[data-eq-state$="small"]:last-child > .layout__item, .px-fourup[data-eq-state$="large"]:last-child > .layout__item {
   border-bottom: 0; }
+  .px-fourup[data-eq-state$="small"]:last-child > .layout__item ::content .widget-1, .px-fourup[data-eq-state$="small"]:last-child > .layout__item ::content .widget-2, .px-fourup[data-eq-state$="large"]:last-child > .layout__item ::content .widget-1, .px-fourup[data-eq-state$="large"]:last-child > .layout__item ::content .widget-2 {
+    padding-bottom: 1.3333333333rem; }
 
 /*
  * Six Up
@@ -739,7 +741,7 @@ a {
     padding-left: 1.3333333333rem; }
 
 /*
- * All widget less than 600px
+ * All layout__items
  */
 .layout--widget > .layout__item {
   border-bottom-width: 1px;

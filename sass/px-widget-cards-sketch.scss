@@ -57,7 +57,7 @@ $inuit-enable-layout--full      : true;
   [class^="widget-"] {
     width: 100%;
     padding-top: $inuit-base-spacing-unit--large;
-    padding-bottom: $inuit-base-spacing-unit--large;
+    padding-bottom:  $inuit-base-spacing-unit--large;
   }
   .widget-1 {
     padding-left: 0;
@@ -119,11 +119,11 @@ $inuit-enable-layout--full      : true;
   .#{$inuit-layout-namespace}layout__item,
   %#{$inuit-layout-namespace}layout__item {
     border-bottom: 0;
+    padding-bottom: 0;
     ::content {
       .widget-1 {
         border-right-width: 1px;
         border-right-style: solid;
-        padding-left: $inuit-base-spacing-unit--large;
         padding-right: $inuit-base-spacing-unit--large;
       }
       .widget-2 {
@@ -149,6 +149,11 @@ $inuit-enable-layout--full      : true;
       .#{$inuit-layout-namespace}layout__item,
       %#{$inuit-layout-namespace}layout__item {
         border-bottom: 0;
+        ::content {
+          .widget-1, .widget-2{
+            padding-bottom: $inuit-base-spacing-unit--large;
+          }
+        }
       }
     }
   }
@@ -197,8 +202,10 @@ $inuit-enable-layout--full      : true;
 }
 
 /*
- * All widget less than 600px
+ * All layout__items
  */
+
+
 .layout--widget {
    > {
     .#{$inuit-layout-namespace}layout__item,
@@ -216,6 +223,8 @@ $inuit-enable-layout--full      : true;
     }
   }
 }
+
+
 
 // Trumps
 $inuit-enable-margins--negative : true;

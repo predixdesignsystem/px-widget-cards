@@ -1,3 +1,7 @@
+v2.0.1
+==================
+* Minor fix to css
+
 v2.0.0
 ==================
 * Removed a significant amount of sass to fix bugs. Also updated to new demo style with codepen
