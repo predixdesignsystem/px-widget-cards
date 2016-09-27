@@ -24,10 +24,22 @@ First, install the component via bower on the command line.
 bower install px-widget-cards --save
 ```
 
-Second, import the component to your application with the following tag in your head.
+Second, import any or all of the components to your application with the following tag in your head.
 
 ```
-<link rel="import" href="/bower_components/px-widget-cards/px-widget-cards.html"/>
+<link rel="import" href="/bower_components/px-widget-cards/px-twoup.html"/>
+```
+or
+```
+<link rel="import" href="/bower_components/px-widget-cards/px-threeup.html"/>
+```
+or
+```
+<link rel="import" href="/bower_components/px-widget-cards/px-fourup.html"/>
+```
+or
+```
+<link rel="import" href="/bower_components/px-widget-cards/px-sixup.html"/>
 ```
 
 Finally, use the component in your application:
@@ -103,7 +115,7 @@ or
 <br />
 <hr />
 
-## documentation
+## Documentation
 
 Read the full API and view the demo [here](https://predixdev.github.io/px-widget-cards).
 
