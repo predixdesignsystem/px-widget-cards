@@ -45,7 +45,7 @@
     "px-dropdown": "^0.12.1",
     "px-polymer-font-awesome": "^0.1.9",
     "px-flexbox-design": "^0.3.9",
-    "px-demo-snippet": "^0.5.1"
+    "px-demo-snippet": "^0.6.4"
   },
   "resolutions": {
     "px-theme": "^1.1.2",
