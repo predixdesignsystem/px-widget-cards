@@ -1,3 +1,7 @@
+v2.1.1
+==================
+* Update dependencies
+
 v2.0.2
 ==================
 * bower fixes
