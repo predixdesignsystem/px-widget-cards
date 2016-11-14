@@ -27,6 +27,6 @@ common/abstract rules go in px-widget-cards-sketch.scss, not in this file.
 // }
 
 .layout__item, ::content [class^="widget-"] {
-  border-bottom-color: $gray5;
-  border-right-color: $gray5;
+  border-bottom-color: var(--px-widget-border-color, $gray5);
+  border-right-color: var(--px-widget-border-color, $gray5);
 }

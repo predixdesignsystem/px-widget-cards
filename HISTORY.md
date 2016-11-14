@@ -1,3 +1,7 @@
+v2.1.2
+==================
+* added style variable for theming
+
 v2.1.1
 ==================
 * Update dependencies
