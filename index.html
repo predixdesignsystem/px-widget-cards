@@ -87,6 +87,8 @@
           <px-demo-snippet
             element-properties="[[elempropTwoup]]"
             element-name="px-twoup"
+            links-includes="[[twoUpLinksIncludes]]"
+            polygit-includes="[[polygitIncludes]]"
             >
           </px-demo-snippet>
         </div>
@@ -111,6 +113,8 @@
       <div>
         <px-demo-snippet
           element-properties="[[elempropThreeup]]"
+          links-includes="[[threeUpLinksIncludes]]"
+          polygit-includes="[[polygitIncludes]]"
           element-name="px-threeup">
         </px-demo-snippet>
       </div>
@@ -138,6 +142,8 @@
         <div>
           <px-demo-snippet
             element-properties="[[elempropFourup]]"
+            links-includes="[[fourUpLinksIncludes]]"
+            polygit-includes="[[polygitIncludes]]"
             element-name="px-fourup">
           </px-demo-snippet>
         </div>
@@ -172,6 +178,8 @@
         <div>
           <px-demo-snippet
             element-properties="[[elempropSixup]]"
+            links-includes="[[sixUpLinksIncludes]]"
+            polygit-includes="[[polygitIncludes]]"
             element-name="px-sixup">
           </px-demo-snippet>
         </div>
@@ -232,6 +240,13 @@
           template.elempropThreeup = elempropThreeup;
           template.elempropFourup = elempropFourup;
           template.elempropSixup = elempropSixup;
+
+          template.polygitIncludes = ['eq.js*+Snugug+*'];
+
+          template.twoUpLinksIncludes = ['px-widget-cards/px-twoup.html'];
+          template.threeUpLinksIncludes = ['px-widget-cards/px-threeup.html'];
+          template.fourUpLinksIncludes = ['px-widget-cards/px-fourup.html'];
+          template.sixUpLinksIncludes = ['px-widget-cards/px-sixup.html'];
     });
   </script>
 </body>

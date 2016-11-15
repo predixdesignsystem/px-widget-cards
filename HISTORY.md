@@ -1,3 +1,6 @@
+v2.1.4
+==================
+* fixed codepens and style of the 'styling section'
 
 v2.1.3
 ==================
