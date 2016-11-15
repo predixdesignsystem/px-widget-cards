@@ -1,54 +1,54 @@
 {
-  "name": "px-widget-cards",
-  "version": "2.1.2",
-  "main": [
-    "px-widget-cards.html"
-  ],
-  "ignore": [
-    ".*",
-    "npm-debug.log",
-    "Gruntfile.js",
-    "sass",
-    "bower_components",
-    "node_modules",
-    "test",
-    "OSS_Notice.pdf",
-    "scripts",
-    ".github",
-    "px-widget-cards.png"
-  ],
-  "dependencies": {
-    "eq.js": "~1.9.0",
-    "polymer": "^v1.6.1",
-    "px-card": "~0.5.1",
-    "px-theme": "^1.1.2",
-    "iron-ajax": "PolymerElements/iron-ajax#^1.4.3"
-  },
-  "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#~v1.1.0",
-    "px-layout-design": "~0.3.13",
-    "px-starter-kit-design": "~0.6.0",
-    "px-slider": "~0.6.0",
-    "px-spacing-design": "~0.3.8",
-    "px-buttons-design": "~0.4.26",
-    "px-forms-design": "#~0.3.15",
-    "px-button-group-design": "~0.3.12",
-    "px-typography-design": "^1.1.1",
-    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.2.5",
-    "px-tabs": "~0.5.2",
-    "px-api-viewer": "^0.1.0",
-    "px-list-inline-design": "^0.2.11",
-    "px-toggle-design": "^0.2.12",
-    "px-headings-design": "^0.2.14",
-    "px-actionable-text-icons-design": "^0.1.0",
-    "px-code-design": "~0.2.11",
-    "px-dropdown": "^0.12.1",
-    "px-polymer-font-awesome": "^0.1.9",
-    "px-flexbox-design": "^0.3.9",
-    "px-demo-snippet": "^0.6.4"
-  },
-  "resolutions": {
-    "px-theme": "^1.1.2",
-    "px-typography-design": "^1.1.1"
-  }
+    "name": "px-widget-cards",
+    "version": "2.1.3",
+    "main": [
+        "px-widget-cards.html"
+    ],
+    "ignore": [
+        ".*",
+        "npm-debug.log",
+        "Gruntfile.js",
+        "sass",
+        "bower_components",
+        "node_modules",
+        "test",
+        "OSS_Notice.pdf",
+        "scripts",
+        ".github",
+        "px-widget-cards.png"
+    ],
+    "dependencies": {
+        "eq.js": "~1.9.0",
+        "polymer": "^v1.6.1",
+        "px-card": "~0.5.1",
+        "px-theme": "^1.1.2",
+        "iron-ajax": "PolymerElements/iron-ajax#^1.4.3"
+    },
+    "devDependencies": {
+        "iron-component-page": "PolymerElements/iron-component-page#~v1.1.0",
+        "px-layout-design": "~0.3.13",
+        "px-starter-kit-design": "~0.6.0",
+        "px-slider": "~0.6.0",
+        "px-spacing-design": "~0.3.8",
+        "px-buttons-design": "~0.4.26",
+        "px-forms-design": "#~0.3.15",
+        "px-button-group-design": "~0.3.12",
+        "px-typography-design": "^1.1.1",
+        "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.2.5",
+        "px-tabs": "~0.5.2",
+        "px-api-viewer": "^0.1.0",
+        "px-list-inline-design": "^0.2.11",
+        "px-toggle-design": "^0.2.12",
+        "px-headings-design": "^0.2.14",
+        "px-actionable-text-icons-design": "^0.1.0",
+        "px-code-design": "~0.2.11",
+        "px-dropdown": "^0.12.1",
+        "px-polymer-font-awesome": "^0.1.9",
+        "px-flexbox-design": "^0.3.9",
+        "px-demo-snippet": "^0.6.9"
+    },
+    "resolutions": {
+        "px-theme": "^1.1.2",
+        "px-typography-design": "^1.1.1"
+    }
 }
