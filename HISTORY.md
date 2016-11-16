@@ -1,3 +1,8 @@
+
+v2.1.5
+==================
+* changing Gruntfile.js to gulpfile.js
+
 v2.1.4
 ==================
 * fixed codepens and style of the 'styling section'
