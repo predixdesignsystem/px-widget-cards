@@ -1,6 +1,6 @@
 {
     "name": "px-widget-cards",
-    "version": "2.1.7",
+    "version": "2.1.8",
     "main": [
         "px-widget-cards.html"
     ],
@@ -21,7 +21,7 @@
         "eq.js": "~1.9.0",
         "polymer": "^v1.6.1",
         "px-card": "~0.5.1",
-        "px-theme": "^1.1.2",
+        "px-theme": "^2.0.1",
         "iron-ajax": "PolymerElements/iron-ajax#^1.4.3"
     },
     "devDependencies": {
