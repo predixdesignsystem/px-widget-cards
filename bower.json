@@ -1,6 +1,6 @@
 {
     "name": "px-widget-cards",
-    "version": "2.1.9",
+    "version": "2.1.10",
     "main": [
         "px-widget-cards.html"
     ],
@@ -28,7 +28,7 @@
         "iron-component-page": "PolymerElements/iron-component-page#~v1.1.0",
         "px-layout-design": "^0.3.13",
         "px-starter-kit-design": "^0.6.0",
-        "px-slider": "^0.6.0",
+        "px-slider": "^0.7.6",
         "px-spacing-design": "^0.3.8",
         "px-buttons-design": "^0.4.26",
         "px-forms-design": "^0.3.15",
