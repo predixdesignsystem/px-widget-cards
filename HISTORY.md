@@ -1,3 +1,7 @@
+v2.1.11
+==================
+* changing browser in wct testing from safari 8 to safari 10 on elcapitan
+
 v2.1.10
 ==================
 * updating slider dependency
