@@ -1,0 +1,258 @@
+<!-- Common imports -->
+<link rel="import" href="../../polymer/polymer.html" />
+<link rel="import" href="../../px-polymer-font-awesome/polymer-font-awesome.html" />
+
+<!-- Common demo imports -->
+<link rel="import" href="../../px-demo/px-demo-header.html" />
+<link rel="import" href="../../px-demo/px-demo-api-viewer.html" />
+<link rel="import" href="../../px-demo/px-demo-footer.html" />
+<link rel="import" href="../../px-demo/px-demo-configs.html" />
+<link rel="import" href="../../px-demo/px-demo-props.html" />
+<link rel="import" href="../../px-demo/px-demo-interactive.html" />
+<link rel="import" href="../../px-demo/px-demo-component-snippet.html" />
+
+<!-- Imports for this componnent -->
+<link rel="import" href="../../px-demo/css/px-demo-styles.html" />
+<link rel="import" href="../px-twoup.html" />
+<link rel="import" href="../px-threeup.html" />
+<link rel="import" href="../px-fourup.html" />
+<link rel="import" href="../px-sixup.html" />
+
+
+<!-- Demo DOM module -->
+<dom-module id="local-element-demo">
+  <template>
+    <style include="px-demo-styles" is="custom-style"></style>
+    <style>
+      .remove-min-height{
+        min-height: 0%; 
+      }
+    </style>
+
+    <!-- Header -->
+    <px-demo-header
+        module-name="px-widget-cards"
+        description="Cards consist of a header area and content area, with a horizontal rule or border in between. The header can optionally contain a descriptive icon in the top left corner and/or a chevron button in the top right corner for configuration options or other menu items. Cards are incredibly flexible in terms of what widgets can be placed in the content area of the card and how they’re arranged, but a few preset configurations are provided – the 2-UP, 3-UP, 4-UP, and 6-UP card templates organize widgets in a responsive grid that adapts to various device sizes.
+        Cards are designed to be containers for an application’s content and functions. They reside within the content areas and must be associated with a context and a view.">
+    </px-demo-header>
+
+    <!-- Interactive -->
+    <section class="demo-background--interactive">
+      <div class="u-p++">
+
+         <!-- Styling -->
+        <h2>Styling</h2>
+        <p>The following custom property is available for styling:</p>
+        <table class="u-mb++ text--left">
+          <thead>
+            <th>Customer property</th>
+            <th>Description</th>
+            <th>Default</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="u-pr++">--px-widget-border-color</td>
+              <td class="u-pr++">Border color for the lines that appear between widgets in the card</td>
+              <td class="u-pr++">$gray5</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Two UP -->
+          <div class="demo-component-container remove-min-height">
+            <px-twoup id="widgetsx2" widget-header="2 Widget Card" widget-icon="fa-fort-awesome">
+              <div class="widget-1">
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+              </div>
+              <div class="widget-2">
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+              </div>
+            </px-twoup>
+          </div>
+          <div>
+            <px-demo-snippet
+              element-properties="[[elempropTwoup]]"
+              element-name="px-twoup"
+              links-includes="[[twoUpLinksIncludes]]"
+              polygit-includes="[[polygitIncludes]]"
+              >
+            </px-demo-snippet>
+          </div>
+
+        <!-- Three UP -->
+        <div class="demo-component-container remove-min-height u-mt++">
+          <px-threeup id="widgetsx3" widget-header="3 Widget Card" widget-icon="fa-hand-peace-o">
+            <div class='widget-1'>
+              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+            </div>
+            <div class='widget-2'>
+              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+            </div>
+            <div class='widget-3'>
+              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+            </div>
+          </px-threeup>
+        </div>
+        <div>
+          <px-demo-snippet
+            element-properties="[[elempropThreeup]]"
+            links-includes="[[threeUpLinksIncludes]]"
+            polygit-includes="[[polygitIncludes]]"
+            element-name="px-threeup">
+          </px-demo-snippet>
+        </div>
+
+        <!-- Four UP -->
+        <div class="demo-component-container remove-min-height u-mt++">
+
+            <px-fourup id="widgetsx4" widget-header="4 Widget Card" widget-icon="fa-hand-o-right">
+              <div class='widget-1'>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+              </div>
+              <div class='widget-2'>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+              </div>
+              <div class='widget-3'>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+              </div>
+              <div class='widget-4'>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+              </div>
+            </px-fourup>
+          </div>
+          <div>
+            <px-demo-snippet
+              element-properties="[[elempropFourup]]"
+              links-includes="[[fourUpLinksIncludes]]"
+              polygit-includes="[[polygitIncludes]]"
+              element-name="px-fourup">
+            </px-demo-snippet>
+          </div>
+
+        <!-- Six UP -->
+        <div class="demo-component-container remove-min-height u-mt++">
+
+            <px-sixup id="widgetsx6" widget-header="6 Widget Card" widget-icon="fa-pied-piper">
+              <div class='widget-1'>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+              </div>
+              <div class='widget-2'>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>
+              </div>
+              <div class='widget-3'>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+              </div>
+              <div class='widget-4'>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+              </div>
+              <div class='widget-5'>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+              </div>
+              <div class='widget-6'>
+                <span>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+              </div>
+            </px-sixup>
+          </div>
+          <div>
+            <px-demo-snippet
+              element-properties="[[elempropSixup]]"
+              links-includes="[[sixUpLinksIncludes]]"
+              polygit-includes="[[polygitIncludes]]"
+              element-name="px-sixup">
+            </px-demo-snippet>
+          </div>
+      </div>
+    </section>    
+
+    <!-- Footer -->
+    <px-demo-footer></px-demo-footer>
+
+  </template>
+
+</dom-module>
+<script>
+  Polymer({
+    is: 'local-element-demo',
+
+    properties: {
+
+      /**
+       * two up properties for demo snippet
+       */
+      elempropTwoup: {
+        type: Object,
+        value: {
+            "id": "widget-2",
+            "widget-header":"2 Widget Card",
+            "widget-icon":"fa-paper-plane",
+            "lightDomContent": "<div class='widget-1'><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></div><div class='widget-2'><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span></div>"
+          }
+      },
+      twoUpLinksIncludes:{
+        type: Array, 
+        value: ['px-widget-cards/px-twoup.html']
+      },
+
+      /**
+       * three up properties for demo snippet
+       */
+      elempropThreeup: {
+        type: Object,
+        value: {
+            "id": "widget-3",
+            "widget-header":"3 Widget Card",
+            "widget-icon":"fa-pied-piper",
+            "lightDomContent": "<div class='widget-1'><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></div><div class='widget-2'><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span></div><div class='widget-3'><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span></div>"
+          }
+      },
+      threeUpLinksIncludes:{
+        type: Array, 
+        value: ['px-widget-cards/px-threeup.html']
+      },
+
+      /**
+       * four up properties for demo snippet
+       */
+      elempropFourup: {
+        type: Object,
+        value: {
+            "id": "widget-4",
+            "widget-header":"4 Widget Card",
+            "widget-icon":"fa-camera-retro",
+            "lightDomContent": "<div class='widget-1'><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></div><div class='widget-2'><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span></div><div class='widget-3'><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></div><div class='widget-4'><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span></div>"
+          }
+      },
+      fourUpLinksIncludes:{
+        type: Array, 
+        value: ['px-widget-cards/px-fourup.html']
+      },
+
+      /**
+       * six up properties for demo snippet
+       */
+      elempropSixup: {
+        type: Object,
+        value: {
+            "id": "widget-6",
+            "widget-header":"6 Widget Card",
+            "widget-icon":"fa-hand-peace-o",
+            "lightDomContent": "<div class='widget-1'><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></div><div class='widget-2'><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span></div><div class='widget-3'><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></div><div class='widget-4'><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span></div><div class='widget-5'><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></div><div class='widget-6'><span>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span></div>"
+          }
+      },
+      sixUpLinksIncludes:{
+        type: Array, 
+        value: ['px-widget-cards/px-sixup.html']
+      }
+    },
+
+
+  });
+</script>
