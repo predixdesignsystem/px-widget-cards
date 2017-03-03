@@ -34,13 +34,11 @@ Predix branding rules go in px-widget-cards-predix.scss, not in this file.
 // Objects
 $inuit-enable-layout--flush     : true;
 $inuit-enable-layout--full      : true;
-
 @import "px-layout-design/_objects.layout.scss";
 
 // Component
 .layout--widget > {
-  .#{$inuit-layout-namespace}layout__item,
-  %#{$inuit-layout-namespace}layout__item {
+  .layout__item {
     border-bottom-width: 1px;
     border-bottom-style: solid;
     &:nth-last-child(-n+6):first-child,
@@ -56,24 +54,15 @@ $inuit-enable-layout--full      : true;
 ::content {
   [class^="widget-"] {
     width: 100%;
-    padding-top: $inuit-base-spacing-unit--large;
-    padding-bottom:  $inuit-base-spacing-unit--large;
-  }
-  .widget-1 {
-    padding-left: 0;
+    padding: $inuit-base-spacing-unit--large $inuit-base-spacing-unit--large $inuit-base-spacing-unit--huge $inuit-base-spacing-unit--large;
   }
 }
 
 [data-eq-state$="small"], [data-eq-state$="large"] {
-  .#{$inuit-layout-namespace}layout__item,
-  %#{$inuit-layout-namespace}layout__item {
+  .layout__item {
     &:nth-child(odd) ::content [class^="widget-"] {
       border-right-width: 1px;
       border-right-style: solid;
-      padding-right: $inuit-base-spacing-unit--large;
-    }
-    &:nth-child(even) ::content [class^="widget-"] {
-      padding-left: $inuit-base-spacing-unit--large;
     }
   }
 }
@@ -83,8 +72,7 @@ $inuit-enable-layout--full      : true;
  */
 .px-twoup {
   [data-eq-state$="small"], [data-eq-state$="large"] {
-    .#{$inuit-layout-namespace}layout__item,
-    %#{$inuit-layout-namespace}layout__item {
+    .layout__item {
       border-bottom: 0;
     }
   }
@@ -95,19 +83,16 @@ $inuit-enable-layout--full      : true;
  */
 .px-threeup
   [data-eq-state$="small"]{
-    .#{$inuit-layout-namespace}layout__item,
-    %#{$inuit-layout-namespace}layout__item {
+    .layout__item {
       border-bottom: 0;
       ::content {
         .widget-1 {
           border-bottom-width: 1px;
           border-bottom-style: solid;
-          padding-right: $inuit-base-spacing-unit--large;
         }
         .widget-2 {
           border-bottom-width: 1px;
           border-bottom-style: solid;
-          padding-left: $inuit-base-spacing-unit--large;
         }
         .widget-3{
           border-right: 0;
@@ -116,24 +101,18 @@ $inuit-enable-layout--full      : true;
     }
   }
 .px-threeup [data-eq-state$="large"] {
-  .#{$inuit-layout-namespace}layout__item,
-  %#{$inuit-layout-namespace}layout__item {
+  .layout__item {
     border-bottom: 0;
-    padding-bottom: 0;
     ::content {
       .widget-1 {
         border-right-width: 1px;
         border-right-style: solid;
-        padding-right: $inuit-base-spacing-unit--large;
       }
       .widget-2 {
         border-right-width: 1px;
         border-right-style: solid;
-        padding-right: $inuit-base-spacing-unit--large;
       }
       .widget-3{
-        padding-left: $inuit-base-spacing-unit--large;
-        padding-right: $inuit-base-spacing-unit--large;
         border-right: 0;
       }
     }
@@ -149,11 +128,6 @@ $inuit-enable-layout--full      : true;
       .#{$inuit-layout-namespace}layout__item,
       %#{$inuit-layout-namespace}layout__item {
         border-bottom: 0;
-        ::content {
-          .widget-1, .widget-2{
-            padding-bottom: $inuit-base-spacing-unit--large;
-          }
-        }
       }
     }
   }
@@ -163,16 +137,14 @@ $inuit-enable-layout--full      : true;
  * Six Up
  */
 .px-sixup [data-eq-state$="small"] {
-  .#{$inuit-layout-namespace}layout__item,
-  %#{$inuit-layout-namespace}layout__item {
+  .layout__item {
     &:nth-child(1n+5) {
       border-bottom: 0;
     }
   }
 }
 .px-sixup [data-eq-state$="large"] {
-  .#{$inuit-layout-namespace}layout__item,
-  %#{$inuit-layout-namespace}layout__item {
+  .layout__item {
     &:nth-child(1n+4) {
       border-bottom: 0;
     }
@@ -181,21 +153,13 @@ $inuit-enable-layout--full      : true;
       .widget-2, .widget-5 {
         border-right-width: 1px;
         border-right-style: solid;
-        padding-right: $inuit-base-spacing-unit--large;
       }
       .widget-4 {
         border-right-width: 1px;
         border-right-style: solid;
-        padding-right: $inuit-base-spacing-unit--large;
-        padding-left: 0;
       }
       .widget-3, .widget-6 {
         border-right: 0;
-        padding-right: 0;
-        padding-left: $inuit-base-spacing-unit--large;
-      }
-      .widget-5 {
-        padding-left: $inuit-base-spacing-unit--large;
       }
     }
   }
@@ -208,15 +172,13 @@ $inuit-enable-layout--full      : true;
 
 .layout--widget {
    > {
-    .#{$inuit-layout-namespace}layout__item,
-    %#{$inuit-layout-namespace}layout__item {
+    .layout__item {
       border-bottom-width: 1px;
       border-bottom-style: solid;
     }
   }
   &:last-child > {
-    .#{$inuit-layout-namespace}layout__item,
-    %#{$inuit-layout-namespace}layout__item {
+    .layout__item {
       &:last-child {
         border-bottom: 0;
       }
@@ -227,6 +189,7 @@ $inuit-enable-layout--full      : true;
 
 
 // Trumps
-$inuit-enable-margins--negative : true;
-
+$inuit-enable-margins--negative       : true;
+$inuit-enable-margins--negative-large : true;
+$inuit-enable-margins--negative-huge  : true;
 @import "px-spacing-design/_trumps.spacing.scss"

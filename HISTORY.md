@@ -1,3 +1,7 @@
+v2.3.0
+==================
+* fixed style per design feedback
+
 v2.2.4
 ==================
 * Updated to px-demo

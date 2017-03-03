@@ -8,9 +8,9 @@
 <dom-module id="px-fourup">
   <template>
     <style include="px-widget-cards-styles"></style>
-    
+
     <px-card header-text="{{widgetHeader}}" icon="{{widgetIcon}}">
-      <div class="layout layout--flush layout--full layout--widget u--mt" data-eq-pts="small: 600, large: 900">
+      <div class="layout layout--flush layout--full layout--widget u--mt+ u--mh+" data-eq-pts="small: 600, large: 900">
         <div class=layout__item>
           <content select=".widget-1"></content>
         </div>
@@ -18,7 +18,7 @@
           <content select=".widget-2"></content>
         </div>
       </div>
-      <div class="layout layout--flush layout--full layout--widget" data-eq-pts="small: 600, large: 900">
+      <div class="layout layout--flush layout--full layout--widget u--mb++ u--mh+" data-eq-pts="small: 600, large: 900">
         <div class=layout__item>
           <content select=".widget-3"></content>
         </div>
