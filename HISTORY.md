@@ -1,3 +1,7 @@
+v2.3.1
+==================
+* fixed small display issue with borders
+
 v2.3.0
 ==================
 * fixed style per design feedback
