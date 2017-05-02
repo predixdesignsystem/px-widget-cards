@@ -2,8 +2,8 @@
     "name": "px-widget-cards",
     "author": "General Electric",
     "description": "A Px component",
-    "version": "2.3.1",
-    "private": true,
+    "version": "2.3.2",
+    "private": false,
     "extName": null,
     "repository": {
         "type": "git",

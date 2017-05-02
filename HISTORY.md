@@ -1,3 +1,7 @@
+v2.3.2
+==================
+* update dependencies
+
 v2.3.1
 ==================
 * fixed small display issue with borders
