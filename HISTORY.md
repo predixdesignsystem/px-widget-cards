@@ -1,3 +1,8 @@
+v3.0.0
+==================
+* update dependencies for redesign
+* component redesign
+
 v2.3.2
 ==================
 * update dependencies

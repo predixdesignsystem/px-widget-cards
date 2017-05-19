@@ -1,0 +1,54 @@
+/*
+ * Copyright (c) 2014 GE Global Research. All rights reserved.
+ *
+ * The copyright to the computer software herein is the property of
+ * GE Global Research. The software may be used and/or copied only
+ * with the written permission of GE Global Research or in accordance
+ * with the terms and conditions stipulated in the agreement/contract
+ * under which the software has been supplied.
+ */
+
+// Settings
+
+// Generic
+@import "px-normalize-design/_generic.normalize.scss";
+@import "px-box-sizing-design/_generic.box-sizing.scss";
+@import "px-helpers-design/_generic.helpers.scss";
+
+// Base
+@import "px-viewport-design/_base.viewport.scss";
+@import "px-flexbox-design/_base.flexbox.scss";
+
+// Objects
+$inuit-enable-layout--flush     : true;
+$inuit-enable-layout--full      : true;
+@import "px-layout-design/_objects.layout.scss";
+
+// Component
+px-card {
+  padding-bottom: 0;
+}
+
+.layout--widget > {
+  .layout__item {
+    padding-bottom: 4rem;
+    &:nth-last-child(-n+6):first-child,
+    &:nth-last-child(-n+6):first-child ~ .layout__item {
+      flex-basis: calculateRem(300px);
+      @include media-query(desk-wide) {
+        flex-basis: 32% !important;
+      }
+    }
+  }
+}
+
+::content {
+  [class^="widget-"] {
+    width: 100%;
+    padding: 0 $inuit-base-spacing-unit--huge;
+  }
+}
+
+// Trumps
+$inuit-enable-margins--negative-huge  : true;
+@import "px-spacing-design/_trumps.spacing.scss";
