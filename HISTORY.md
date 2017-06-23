@@ -2,6 +2,7 @@ v3.0.0
 ==================
 * update dependencies for redesign
 * component redesign
+* remove old iron-ajax dependency
 
 v2.3.2
 ==================
