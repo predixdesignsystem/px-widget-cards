@@ -42,13 +42,5 @@ px-card {
   }
 }
 
-::content {
-  [class^="widget-"] {
-    width: 100%;
-    padding: 0 $inuit-base-spacing-unit--huge;
-  }
-}
-
 // Trumps
-$inuit-enable-margins--negative-huge  : true;
 @import "px-spacing-design/_trumps.spacing.scss";
