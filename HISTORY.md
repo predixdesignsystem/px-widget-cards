@@ -1,3 +1,7 @@
+v3.0.1
+==================
+* update readme and remove old component image
+
 v3.0.0
 ==================
 * update dependencies for redesign

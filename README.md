@@ -1,10 +1,8 @@
 #px-widget-cards [![Build Status](https://travis-ci.org/PredixDev/px-widget-cards.svg?branch=master)](https://travis-ci.org/PredixDev/px-widget-cards)
 
-[![px-widget-cards demo](px-widget-cards.png?raw=true)](https://predixdev.github.io/px-widget-cards)
-
 ## Overview
 
-px-widget-cards is a Predix UI component. Use the 'px-twoup', 'px-threeup', 'px-fourup' and 'px-sixup' components to create cards with two, three, four or six components laid out in a grid (see demo.html for usage and running example).
+`Px-widget-cards` is a Predix UI component that provides various card layouts. Use the 'px-twoup', 'px-threeup', 'px-fourup', and 'px-sixup' components to create cards with two, three, four, or six components laid out in a grid (see demo.html for usage and running example).
 
 ## Usage
 
@@ -14,17 +12,17 @@ px-widget-cards is a Predix UI component. Use the 'px-twoup', 'px-threeup', 'px-
 3. bower
 4. [webcomponents-lite.js polyfill](https://github.com/webcomponents/webcomponentsjs)
 
-Node, npm and bower are necessary to install the component and dependencies. webcomponents.js adds support for web components and custom elements to your application.
+Node, npm, and bower are necessary to install the component and dependencies. webcomponents.js adds support for web components and custom elements to your application.
 
 ### Getting Started
 
-First, install the component via bower on the command line.
+First, install the component via bower on the command line:
 
 ```
 bower install px-widget-cards --save
 ```
 
-Second, import any or all of the components to your application with the following tag in your head.
+Second, import any or all of the components in your application with the following tag in your head:
 
 ```
 <link rel="import" href="/bower_components/px-widget-cards/px-twoup.html"/>
@@ -44,6 +42,7 @@ or
 
 Finally, use the component in your application:
 
+TWOUP
 ```
 <px-twoup id="widgetsx2" widget-header="2 Widget Card" widget-icon="fa-eye">
   <div class=widget-1>
@@ -55,7 +54,7 @@ Finally, use the component in your application:
 </px-twoup>
 ```
 
-or
+THREEUP
 ```
 <px-threeup id="widgetsx3" widget-header="3 Widget Card" widget-icon="fa-eye">
   <div class=widget-1>
@@ -70,7 +69,7 @@ or
 </px-threeup>
 ```
 
-or
+FOURUP
 ```
 <px-fourup id="widgetsx4" widget-header="4 Widget Card" widget-icon="fa-eye">
   <div class=widget-1>
@@ -88,7 +87,7 @@ or
 </px-fourup>
 ```
 
-or
+SIXUP
 ```
 <px-sixup id="widgetsx6" widget-header="6 Widget Card" widget-icon="fa-briefcase">
   <div class=widget-1>
