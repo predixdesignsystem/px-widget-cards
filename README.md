@@ -1,4 +1,4 @@
-#px-widget-cards [![Build Status](https://travis-ci.org/PredixDev/px-widget-cards.svg?branch=master)](https://travis-ci.org/PredixDev/px-widget-cards)
+# px-widget-cards [![Build Status](https://travis-ci.org/PredixDev/px-widget-cards.svg?branch=master)](https://travis-ci.org/PredixDev/px-widget-cards)
 
 ## Overview
 
@@ -26,17 +26,11 @@ Second, import any or all of the components in your application with the followi
 
 ```
 <link rel="import" href="/bower_components/px-widget-cards/px-twoup.html"/>
-```
-or
-```
+
 <link rel="import" href="/bower_components/px-widget-cards/px-threeup.html"/>
-```
-or
-```
+
 <link rel="import" href="/bower_components/px-widget-cards/px-fourup.html"/>
-```
-or
-```
+
 <link rel="import" href="/bower_components/px-widget-cards/px-sixup.html"/>
 ```
 
