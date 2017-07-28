@@ -1,6 +1,6 @@
 {
   "name": "px-widget-cards",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "main": [
     "px-widget-cards.html"
   ],
@@ -26,7 +26,6 @@
     "px-widget-cards.png"
   ],
   "dependencies": {
-    "eq.js": "~1.9.0",
     "polymer": "^1.9.0",
     "px-card": "^1.0.0"
   },

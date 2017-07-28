@@ -1,3 +1,7 @@
+v3.0.2
+==================
+* remove eq.js (#9) and restore missing icons/gutters
+
 v3.0.1
 ==================
 * update readme and remove old component image

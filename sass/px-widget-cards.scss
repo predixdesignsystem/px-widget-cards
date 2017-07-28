@@ -21,7 +21,6 @@
 
 // Objects
 $inuit-enable-layout--flush     : true;
-$inuit-enable-layout--full      : true;
 @import "px-layout-design/_objects.layout.scss";
 
 // Component
@@ -34,7 +33,9 @@ px-card {
     padding-bottom: 4rem;
     &:nth-last-child(-n+6):first-child,
     &:nth-last-child(-n+6):first-child ~ .layout__item {
-      flex-basis: calculateRem(300px);
+      flex-basis: 20rem;
+      margin-right: 2rem;
+      margin-left: 2rem;
       @include media-query(desk-wide) {
         flex-basis: 32% !important;
       }
