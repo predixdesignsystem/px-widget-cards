@@ -1,3 +1,7 @@
+v3.0.3
+==================
+* runtime theming for demo
+
 v3.0.2
 ==================
 * remove eq.js (#9) and restore missing icons/gutters
