@@ -1,3 +1,7 @@
+v3.0.4
+==================
+* fix icon naming in demo
+
 v3.0.3
 ==================
 * runtime theming for demo
