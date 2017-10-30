@@ -1,3 +1,7 @@
+v3.0.5
+==================
+* add device flags
+
 v3.0.4
 ==================
 * fix icon naming in demo
