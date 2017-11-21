@@ -26,16 +26,31 @@
     "px-widget-cards.png"
   ],
   "dependencies": {
-    "polymer": "^1.9.0",
-    "px-card": "^1.0.0"
+    "polymer": "#1.9 - 2",
+    "px-card": "^2.0.0"
   },
   "devDependencies": {
     "px-theme": "^3.0.0",
     "px-starter-kit-design": "^1.0.0",
-    "px-demo": "^2.0.0",
-    "px-layout-design": "^1.0.0"
+    "px-demo": "^3.0.0",
+    "px-layout-design": "^1.0.0",
+    "web-component-tester": "^6.0.0"
   },
   "resolutions": {
-    "webcomponentsjs": "^0.7.24"
+    "webcomponentsjs": "^1.0.0"
+  },
+  "variants": {
+    "1.x": {
+      "dependencies": {
+        "polymer": "^1.9.0"
+      },
+      "devDependencies": {
+        "web-component-tester": "^5.0.0"
+      },
+      "resolutions": {
+        "webcomponentsjs": "^0.7.0"
+      }
+    }
   }
+
 }

@@ -1,5 +1,6 @@
 <link rel="import" href="../polymer/polymer.html" />
 <link rel="import" href="../px-card/px-card.html" />
+<link rel="import" href="px-widget-cards-behavior.html" />
 
 <link rel="import" href="css/px-widget-cards-styles.html">
 
@@ -10,10 +11,10 @@
     <px-card header-text="{{widgetHeader}}" icon="{{widgetIcon}}" full-bleed>
       <div class="layout layout--flush layout--widget">
         <div class=layout__item>
-          <content select=".widget-1"></content>
+          <slot name="widget-1"></slot>
         </div>
         <div class=layout__item>
-          <content select=".widget-2"></content>
+          <slot name="widget-2"></slot>
         </div>
       </div>
     </px-card>
@@ -21,6 +22,7 @@
 </dom-module>
 <script>
   Polymer({
-    is: 'px-twoup'
+    is: 'px-twoup',
+    behaviors: [PxWidgetCardsBehavior]
   });
 </script>
