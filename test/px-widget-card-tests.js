@@ -1,11 +1,12 @@
-chai.should();
-
 describe('Set widget card title and icon properties', done =>{
   let cardFixture,
       cardEl,
       headerEl,
       iconEl;
 
+  before(()=>{
+    chai.should();
+  });
   beforeEach(done=>{
     cardFixture = fixture('px-widget-card-attribute-test-fixture');
     flush(()=>{
@@ -28,4 +29,28 @@ describe('Set widget card title and icon properties', done =>{
     iconEl.tagName.should.equal('PX-ICON');
     iconEl.icon.should.equal('px-fea:analysis');
   });
+});
+
+describe('Set widget card content', done =>{
+  let cardFixture,
+      slot1,
+      slot2;
+  before(()=>{
+    chai.should();
+  });
+
+  beforeEach(done=>{
+    cardFixture = fixture('px-widget-card-content-test-fixture');
+
+    flush(()=>{
+      slot1 = Polymer.dom(cardFixture).querySelector('[slot=widget-1]')
+      slot2 = Polymer.dom(cardFixture).querySelector('[slot=widget-2]')
+      done();
+    });
+  });
+  it('slots should exist', ()=>{
+    slot1.should.exist;
+    slot2.should.exist;
+  });
+
 });
