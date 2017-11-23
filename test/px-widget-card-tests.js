@@ -35,11 +35,8 @@ describe('Set widget card content', done =>{
   let cardFixture,
       slot1,
       slot2;
-  before(()=>{
+  before(done=>{
     chai.should();
-  });
-
-  beforeEach(done=>{
     cardFixture = fixture('px-widget-card-content-test-fixture');
 
     flush(()=>{
@@ -48,9 +45,15 @@ describe('Set widget card content', done =>{
       done();
     });
   });
+
   it('slots should exist', ()=>{
     slot1.should.exist;
     slot2.should.exist;
+  });
+
+  it('slots should contain content', ()=>{
+    slot1.textContent.should.equal('IPA');
+    slot2.textContent.should.equal('Stout');
   });
 
 });
