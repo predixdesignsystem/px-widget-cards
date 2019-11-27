@@ -22,37 +22,52 @@ limitations under the License.
   <title>px-widget-cards Demo</title>
   <link rel="stylesheet" type="text/css" href="css/px-widget-cards-demo.css"/>
   <!-- Import custom element. Note: see comment about relative paths to dependencies in the *.html file referenced below -->
-  <script src="../webcomponentsjs/webcomponents-lite.js"></script>
-  <link rel="import" href="../px-theme/px-theme-styles.html">
-  <style include="px-theme-styles" is="custom-style"></style>
-  <link rel="import" href="../px-api-viewer/px-api-viewer.html" />
+  <script src="../@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+  <script type="module" src="../px-theme/px-theme-styles.js"></script>
+  <!-- FIXME(polymer-modulizer):
+        These imperative modules that innerHTML your HTML are
+        a hacky way to be sure that any mixins in included style
+        modules are ready before any elements that reference them are
+        instantiated, otherwise the CSS @apply mixin polyfill won't be
+        able to expand the underlying CSS custom properties.
+        See: https://github.com/Polymer/polymer-modulizer/issues/154
+        -->
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+$_documentContainer.innerHTML = `<style include="px-theme-styles" is="custom-style"></style>`;
+document.head.appendChild($_documentContainer.content);
+</script>
+  <script type="module" src="../px-api-viewer/px-api-viewer.js"></script>
   <link rel="import" href="../px-tabs/px-tab-set.html" />
   <link rel="import" href="px-widget-cards.html"/>
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-  <link rel="import" href="../px-demo-snippet/px-demo-snippet.html"/>
+  <script type="module" src="../px-demo-snippet/px-demo-snippet.js"></script>
   <link rel="import" href="../polymer-font-awesome/polymer-font-awesome.html"/>
   <link rel="import" href="../iron-demo-helpers/demo-snippet.html"/>
   <link rel="import" href="../iron-demo-helpers/demo-pages-shared-styles.html"/>
-  <link rel="import" href="px-twoup.html" />
-  <link rel="import" href="px-threeup.html" />
-  <link rel="import" href="px-fourup.html" />
-  <link rel="import" href="px-sixup.html" />
+  <script type="module" src="./px-twoup.js"></script>
+  <script type="module" src="./px-threeup.js"></script>
+  <script type="module" src="./px-fourup.js"></script>
+  <script type="module" src="./px-sixup.js"></script>
   </head>
 
 <body>
 
         <!-- Two UP -->
 
-              <div class="demoContainer u-mt+">
+              <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<div class="demoContainer u-mt+">
                 <div class="flex flex--col">
                   <div class="demo u-p+">
                     <demo-snippet>
                       <template>
                     <px-twoup id="widgetsx2" widget-header="2 Widget Card" widget-icon="fa-eye">
-                      <div class=widget-1>
+                      <div class="widget-1">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                       </div>
-                      <div class=widget-2>
+                      <div class="widget-2">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                       </div>
                     </px-twoup>
@@ -60,7 +75,10 @@ limitations under the License.
                   </demo-snippet>
                   </div>
                 </div>
-              </div>
+              </div>`;
+
+document.body.appendChild($_documentContainer.content);
+</script>
 
 
 </body>

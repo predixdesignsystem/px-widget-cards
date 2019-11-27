@@ -1,4 +1,4 @@
-<!--
+/*
 Copyright (c) 2018, General Electric
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,41 +12,43 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
--->
+*/
+/*
+  FIXME(polymer-modulizer): the above comments were extracted
+  from HTML and may be out of place here. Review them and
+  then delete this comment!
+*/
+import '@polymer/polymer/polymer-legacy.js';
 
-<link rel="import" href="../polymer/polymer.html" />
-<link rel="import" href="../px-card/px-card.html" />
-<link rel="import" href="px-widget-cards-behavior.html" />
-
-<link rel="import" href="css/px-widget-cards-styles.html">
-
-<dom-module id="px-fourup">
-  <template>
+import 'px-card/px-card.js';
+import './px-widget-cards-behavior.js';
+import './css/px-widget-cards-styles.js';
+import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
+import { html } from '@polymer/polymer/lib/utils/html-tag.js';
+Polymer({
+  _template: html`
     <style include="px-widget-cards-styles"></style>
 
-    <px-card header-text="{{widgetHeader}}" icon="{{widgetIcon}}" full-bleed>
+    <px-card header-text="{{widgetHeader}}" icon="{{widgetIcon}}" full-bleed="">
       <div class="layout layout--flush layout--widget">
-        <div class=layout__item>
+        <div class="layout__item">
           <slot name="widget-1"></slot>
         </div>
-        <div class=layout__item>
+        <div class="layout__item">
           <slot name="widget-2"></slot>
         </div>
       </div>
       <div class="layout layout--flush layout--widget">
-        <div class=layout__item>
+        <div class="layout__item">
           <slot name="widget-3"></slot>
         </div>
-        <div class=layout__item>
+        <div class="layout__item">
           <slot name="widget-4"></slot>
         </div>
       </div>
     </px-card>
-  </template>
-</dom-module>
-<script>
-  Polymer({
-    is: 'px-fourup',
-    behaviors: [PxWidgetCardsBehavior]
-  });
-</script>
+`,
+
+  is: 'px-fourup',
+  behaviors: [PxWidgetCardsBehavior]
+});

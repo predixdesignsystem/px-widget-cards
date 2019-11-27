@@ -22,36 +22,62 @@ limitations under the License.
     <title>PX Widget Cards tests</title>
 
     <!-- Requires Webcomponents.js polyfill is provided by the page for browsers that don't support html imports -->
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
     <!-- web-component-tester automatically provides local copy of brower.js below
          for any URL ending with "/web-component-tester/browser.js"
          when wct is run from the command line -->
-    <script src="../../web-component-tester/browser.js"></script>
-    <link rel="import" href="../px-twoup.html" />
+    <script src="../../wct-browser-legacy/browser.js"></script>
+    <script type="module" src="../px-twoup.js"></script>
     <!-- Retain this link for px-theme.html -->
     <!-- For some reason px-theme is needed for WCT to run without some errors -->
-    <link rel="import" href="../../px-theme/px-theme-styles.html">
+    <script type="module" src="../../px-theme/px-theme-styles.js"></script>
 
-    <script src="px-widget-card-tests.js"></script>
-    <custom-style>
+    <script src="./px-widget-card-tests.js"></script>
+    <!-- FIXME(polymer-modulizer):
+        These imperative modules that innerHTML your HTML are
+        a hacky way to be sure that any mixins in included style
+        modules are ready before any elements that reference them are
+        instantiated, otherwise the CSS @apply mixin polyfill won't be
+        able to expand the underlying CSS custom properties.
+        See: https://github.com/Polymer/polymer-modulizer/issues/154
+        -->
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<custom-style>
       <style include="px-theme-styles" is="custom-style"></style>
-    </custom-style>
+    </custom-style>`;
+
+document.body.appendChild($_documentContainer.content);
+</script>
   </head>
   <body>
-    <test-fixture id="px-widget-card-attribute-test-fixture">
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<test-fixture id="px-widget-card-attribute-test-fixture">
       <template>
         <px-twoup widget-header="LRN2CODE" widget-icon="px-fea:analysis"></px-twoup>
       </template>
-    </test-fixture>
+    </test-fixture>`;
 
-    <test-fixture id="px-widget-card-content-test-fixture">
+document.body.appendChild($_documentContainer.content);
+</script>
+
+    <script type="module">
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<test-fixture id="px-widget-card-content-test-fixture">
       <template>
         <px-twoup>
           <p slot="widget-1">IPA</p>
           <p slot="widget-2">Stout</p>
         </px-twoup>
       </template>
-    </test-fixture>
+    </test-fixture>`;
+
+document.body.appendChild($_documentContainer.content);
+</script>
 
   </body>
 </html>
